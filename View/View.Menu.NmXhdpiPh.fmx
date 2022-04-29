@@ -1,0 +1,15 @@
+inherited view_Menu_NmXhdpiPh: Tview_Menu_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  DesignerMasterStyle = 0
+  inherited layoutTitle: TLayout
+    Size.Width = 400.000000000000000000
+    inherited rectangleTitle: TRectangle
+      Size.Width = 400.000000000000000000
+      inherited labelTitle: TLabel
+        Size.Width = 400.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000100000004000000}
+      end
+    end
+  end
+end

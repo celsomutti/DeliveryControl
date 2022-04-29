@@ -1,0 +1,106 @@
+inherited view_EntregasDia_LgXhdpiPh: Tview_EntregasDia_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 0
+  inherited layoutPadrao: TLayout
+    Size.Width = 450.000000000000000000
+    Size.Height = 695.000000000000000000
+    inherited layoutFiltro: TLayout
+      Margins.Top = 10.000000000000000000
+      Position.Y = 43.000000000000000000
+      Size.Width = 450.000000000000000000
+      inherited imageSearch: TImage
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        Position.X = 401.000000000000000000
+        Position.Y = 66.000000000000000000
+        Size.Height = 30.000000000000000000
+      end
+      inherited dateEditInicial: TDateEdit
+        Size.Height = 32.000000000000000000
+      end
+      inherited labelInicial: TLabel
+        Margins.Bottom = 15.000000000000000000
+      end
+      inherited dateEditFinal: TDateEdit
+        Size.Height = 32.000000000000000000
+      end
+      inherited labelDescricao: TLabel
+        Margins.Top = 15.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Position.Y = 15.000000000000000000
+        Size.Width = 440.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000100000004000000}
+      end
+    end
+    inherited stringGridExtrato: TStringGrid
+      Size.Width = 440.000000000000000000
+      Size.Height = 463.000000000000000000
+      TextSettings.Font.Size = 11.000000000000000000
+      Viewport.Width = 440.000000000000000000
+      Viewport.Height = 463.000000000000000000
+      inherited stringColumnCliente: TStringColumn
+        Size.Width = 73.000000000000000000
+      end
+      inherited dateColumnData: TDateColumn
+        Size.Width = 79.000000000000000000
+      end
+      inherited stringColumnTipo: TStringColumn
+        Size.Width = 71.000000000000000000
+      end
+      inherited integerColumnQtde: TIntegerColumn
+        Size.Width = 63.000000000000000000
+      end
+    end
+    inherited layoutFooter: TLayout
+      Position.Y = 620.000000000000000000
+      Size.Width = 450.000000000000000000
+    end
+    inherited layoutTitle: TLayout
+      Size.Width = 450.000000000000000000
+      inherited rectangleTitle: TRectangle
+        Size.Width = 450.000000000000000000
+        inherited imageExit: TImage
+          MultiResBitmap.Height = 48
+          MultiResBitmap.Width = 48
+          MultiResBitmap = <
+            item
+              Width = 48
+              Height = 48
+              PNG = {
+                89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+                87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                0286494441546843ED96CF8B525114C7BDCF72249D21216A130A225A11066360
+                8B56F627541BFF0CC1852B712122AEDCB40CDAB433089AA16036F30C6629B850
+                F0076E3525CC5F4F43B473EE7B88BEC678D37B6FB8AFEE070EF8EE39DC73CEBD
+                DF7BAF360E87C3E17038FF28A4D7EB3DE9F7FB11FC2D0F590752AFD723F3F9FC
+                9B2449DF3B9DCE331C935DEC438B5F2C16BDB50236218A62187D7208BB9056AB
+                85C57795DA29ED76FB2C1A8DDE43BF1CC626B8F24FB7571E69341AE7C160F001
+                F86F610C8D64105A3C6A5EA99B02C5977D3EDF43F0BB31864632C8A52BDF6C36
+                452B15BFA37928FE3C10083C02BFF5561E65B355BC402319649FE6BF7ABD5E6B
+                147FD9CA6F15CFB46C7EBBE7B178BFDFFF18FC4760768CD3699AB94A30A956AB
+                91502874E27038EE2A6336185B793C9E1397CB35743A9D3FED76FB5A71FD1582
+                20ACA7D3E905CCF90E3E57F2A87E48AD563B566BDE2C0683C17BC87920A7FE33
+                5A0F9A50A9540E97CBA5A649F5027950869A6AD32A219CEC2893C9BC4824126F
+                DD6E376A9D82128284676073F844F95C49C36A0821ABC964528EC5626FE013E7
+                348C1B6077D2E9F4ABD1683454769BD2ED76C570388C87D807E6D569F7C13C60
+                98CF706813B013AFC7E3F14E1370F0BEC4E3714C7C5389D363A6BE2198803601
+                5BFD43A99F02D7EBE7643279087E5D32BA0EB69BD8D90968E2B4582C6ECE08CB
+                6C9A50CB69369B7DCAE7F3B813CCB37727B00938F0F8B78279F69E09AB36A1DE
+                898F966B42FD4E4892F4A15028B8E430B6A14DE06307077B2327782386A552E9
+                187CCC5FAFC84E1320A9512E977B096378B51ADE80592B824DDCCE66B3CFE1EF
+                3149A55265F81E822DD16924666E2936E104C31C1298E1C55F0758BC998BC4E1
+                70389CFF1A9BED17A48587122D3F1E6D0000000049454E44AE426082}
+              FileName = 
+                'C:\Users\TI\Desktop\Workspace\Projetos\Delphi\DeliveryControl\im' +
+                'ages\arrow_exit\res\mipmap-mdpi\ic_launcher.png'
+            end>
+        end
+      end
+      inherited labelTitle: TLabel
+        Size.Width = 450.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000100000004000000}
+      end
+    end
+  end
+end

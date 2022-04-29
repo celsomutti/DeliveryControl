@@ -1,0 +1,115 @@
+inherited view_Cadastro_LgXhdpiPh: Tview_Cadastro_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 0
+  inherited layoutPadrao: TLayout
+    Size.Width = 450.000000000000000000
+    Size.Height = 695.000000000000000000
+    inherited layoutTitle: TLayout
+      Size.Width = 450.000000000000000000
+      inherited rectangleTitle: TRectangle
+        Size.Width = 450.000000000000000000
+        inherited imageExit: TImage
+          MultiResBitmap.Height = 48
+          MultiResBitmap.Width = 48
+          MultiResBitmap = <
+            item
+              Width = 48
+              Height = 48
+              PNG = {
+                89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+                87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                0289494441546843ED96BF8B1A4114C7DD353112BD2342B83487828826211838
+                03A6B8CAFC099734FE19828595588888954DCA409A740602B990C035B706520A
+                168ABFB0D52862FCB51A44F3DEEC22BA39C35E76F7984DE6030FDC798F99EF9B
+                F766460B83C16030188C7F14AEDBED3EEDF57A21FC2D0D9907AE5AAD86E6F3F9
+                77511407ED76FB398E492EFA21E2178B45772D8349088210449F14422F5CB3D9
+                44F11D593BA1D56A5D84C3E107E897C2E80477FED9F6CE23F57AFDD2EFF73F04
+                FF5D8C21911442C463CFCBBA0920BEE8F1781E81DF8931249242AEDCF946A321
+                9849FC4ECF83F84B9FCFF718FCE6DB796C9B2DF13C89A4907D3DFFD5ED769B43
+                FC553BBF259EEAB6F9ED9E47F15EAFF709F80FC1AC18A7D154739D60AE5C2E87
+                0281C0B9CD663B92C72CD3E97435180CCE1D0EC7D06EB7FFB45AAD6BD9F557F0
+                3CBF8639BFB95CAEB7F0B99246B5C3552A951365CF1B45BFDF7F076BDE9196FE
+                336A0F1A5F2A950E96CBA5AA49B502EB601BAAD2A6B68570B2C3542AF522168B
+                BD713A9DD8EB046CA15AAD76018BCEE113DBE75A3DAC84E3B8D5643229462291
+                D7F08973EAC62DB0FBC964F2E568341ACAD526743A1D21180CE221F680B935DA
+                31980B0CD7D31D920454E2D5783CDE49022AF1251A8DE2C2B7E5382D66E81B82
+                0B9024A0D43F64FD04B85E3FC7E3F103F06B6AA39B603B899D4A40129FF2F9FC
+                E68CD0CC2609653BCD66B38FD96C162B413D7B2B8149C081C7BF15D4B3F74C98
+                350965253E982E09E53B218AE2FB5C2EE790C2E88624818F1D1CEC4D3BC11B31
+                2C140A27E0A3FE7A45769280961A6532993318C3AB55F7048CDA114CE25E3A9D
+                3E85BFC75C229128C2F7106C894E3D31B2A498841D0CD710C174177F13A07823
+                3789C1603018FF3516CB2FA7338A12F79A647F0000000049454E44AE426082}
+              FileName = 
+                'C:\Users\TI\Desktop\Workspace\Projetos\Delphi\DeliveryControl\im' +
+                'ages\arrow_exit\res\mipmap-mdpi\ic_launcher.png'
+            end>
+        end
+      end
+      inherited labelTitle: TLabel
+        Size.Width = 450.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000100000004000000}
+      end
+    end
+    inherited labelCadastro: TLabel
+      Size.Width = 430.000000000000000000
+      TextSettings.Font.StyleExt = {00060000000100000004000000}
+    end
+    inherited layoutCPF: TLayout
+      Size.Width = 450.000000000000000000
+      inherited editCPFCNPJ: TEdit
+        Size.Width = 381.000000000000000000
+        Size.Height = 32.000000000000000000
+      end
+      inherited imageSearch: TImage
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        Position.X = 401.000000000000000000
+      end
+    end
+    inherited layoutNome: TLayout
+      Size.Width = 450.000000000000000000
+      inherited editNome: TEdit
+        Size.Width = 430.000000000000000000
+        Size.Height = 32.000000000000000000
+      end
+    end
+    inherited layoutEMail: TLayout
+      Size.Width = 450.000000000000000000
+      inherited editEMail: TEdit
+        Size.Width = 430.000000000000000000
+        Size.Height = 32.000000000000000000
+      end
+    end
+    inherited layoutSenha: TLayout
+      Size.Width = 450.000000000000000000
+      inherited editSenha: TEdit
+        Size.Width = 380.000000000000000000
+        Size.Height = 32.000000000000000000
+      end
+      inherited imageView: TImage
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        Position.X = 408.000000000000000000
+      end
+    end
+    inherited layoutConfirmacao: TLayout
+      Size.Width = 450.000000000000000000
+      inherited editConfirmacaoSenha: TEdit
+        Size.Width = 380.000000000000000000
+        Size.Height = 32.000000000000000000
+      end
+      inherited mageView2: TImage
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        Position.X = 408.000000000000000000
+      end
+    end
+    inherited rectangleGravar: TRectangle
+      Size.Width = 430.000000000000000000
+      inherited labelGravar: TLabel
+        Size.Width = 430.000000000000000000
+      end
+    end
+  end
+end

@@ -1,0 +1,261 @@
+object view_Main: Tview_Main
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 538
+  ClientWidth = 341
+  Fill.Kind = Solid
+  WindowState = wsMaximized
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object layoutPadrao: TLayout
+    Align = Contents
+    Size.Width = 341.000000000000000000
+    Size.Height = 538.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object layoutMenu: TLayout
+      Align = Center
+      Size.Width = 247.000000000000000000
+      Size.Height = 255.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object rectangleExtrato: TRectangle
+        Align = Top
+        Cursor = crHandPoint
+        Fill.Color = xFFF15A23
+        Margins.Top = 20.000000000000000000
+        Position.Y = 20.000000000000000000
+        Size.Width = 247.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFFF15A23
+        XRadius = 4.000000000000000000
+        YRadius = 4.000000000000000000
+        OnMouseDown = rectangleExtratoMouseDown
+        OnMouseUp = rectangleExtratoMouseUp
+        object labelExtrato: TLabel
+          Align = Client
+          StyledSettings = [Family]
+          Locked = True
+          Size.Width = 247.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 16.000000000000000000
+          TextSettings.Font.StyleExt = {00060000000000000004000000}
+          TextSettings.FontColor = claWhite
+          TextSettings.HorzAlign = Center
+          Text = 'Extratos'
+          TabOrder = 0
+        end
+      end
+      object rectangleBoleto: TRectangle
+        Align = Top
+        Cursor = crHandPoint
+        Fill.Color = xFF03A9F4
+        Margins.Top = 20.000000000000000000
+        Position.Y = 90.000000000000000000
+        Size.Width = 247.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFF03A9F4
+        Visible = False
+        XRadius = 4.000000000000000000
+        YRadius = 4.000000000000000000
+        OnMouseDown = rectangleBoletoMouseDown
+        OnMouseUp = rectangleBoletoMouseUp
+        object labelBoleto: TLabel
+          Align = Client
+          StyledSettings = [Family]
+          Locked = True
+          Size.Width = 247.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 16.000000000000000000
+          TextSettings.Font.StyleExt = {00060000000000000004000000}
+          TextSettings.FontColor = claWhite
+          TextSettings.HorzAlign = Center
+          Text = 'Boletos'
+          TabOrder = 0
+        end
+      end
+      object rectangleEntregasDia: TRectangle
+        Align = Top
+        Cursor = crHandPoint
+        Fill.Color = xFFF15A23
+        Margins.Top = 20.000000000000000000
+        Position.Y = 90.000000000000000000
+        Size.Width = 247.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFFF15A23
+        XRadius = 4.000000000000000000
+        YRadius = 4.000000000000000000
+        OnMouseDown = rectangleEntregasDiaMouseDown
+        OnMouseUp = rectangleEntregasDiaMouseUp
+        object labelAcampanhamento: TLabel
+          Align = Client
+          StyledSettings = [Family]
+          Locked = True
+          Size.Width = 247.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 16.000000000000000000
+          TextSettings.Font.StyleExt = {00060000000000000004000000}
+          TextSettings.FontColor = claWhite
+          TextSettings.HorzAlign = Center
+          Text = 'Entregas Dia'
+          TabOrder = 0
+        end
+      end
+      object rectangleSuporte: TRectangle
+        Align = Top
+        Cursor = crHandPoint
+        Fill.Color = xFFF15A23
+        Margins.Top = 20.000000000000000000
+        Position.Y = 160.000000000000000000
+        Size.Width = 247.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFFF15A23
+        XRadius = 4.000000000000000000
+        YRadius = 4.000000000000000000
+        OnMouseDown = rectangleSuporteMouseDown
+        OnMouseUp = rectangleSuporteMouseUp
+        object Label1: TLabel
+          Align = Client
+          StyledSettings = [Family]
+          Locked = True
+          Size.Width = 247.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 16.000000000000000000
+          TextSettings.Font.StyleExt = {00060000000000000004000000}
+          TextSettings.FontColor = claWhite
+          TextSettings.HorzAlign = Center
+          Text = 'Suporte'
+          TabOrder = 0
+        end
+      end
+    end
+    object layoutTitle: TLayout
+      Align = Top
+      Size.Width = 341.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object rectangleTitle: TRectangle
+        Align = Client
+        Fill.Color = xFFF15A23
+        Sides = []
+        Size.Width = 341.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFFF15A23
+        object labelTitle: TLabel
+          Align = Contents
+          StyledSettings = [Family]
+          Locked = True
+          Size.Width = 341.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 20.000000000000000000
+          TextSettings.Font.StyleExt = {00060000000100000004000000}
+          TextSettings.FontColor = claWhite
+          TextSettings.HorzAlign = Center
+          Text = 'Delivery Control'
+          TabOrder = 0
+        end
+        object imageExit: TImage
+          MultiResBitmap.Height = 48
+          MultiResBitmap.Width = 48
+          MultiResBitmap = <
+            item
+              Width = 48
+              Height = 48
+              PNG = {
+                89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+                87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                0446494441546843ED985D48235714C733491A1BA3DDFAD554DB7DD9AE810A5A
+                2C542CF5A12C2DBEF8D287CAB6C6205D857D6D415C764BA9BEB56FB6F4C98585
+                846E0B2222A8552C7DD242119516B18A4289F5DBF50B8D6E1293F4FFCFDC2C76
+                D74966929942617E70987BEFDCB9E79C3BE79E7B672C262626262626FF672471
+                D54AB6CF652221AEAAD1628834383878A5B1B1F196DD6E7F1D75ABDCAC1BF168
+                34FAFBC8C8C883E6E6E610EA9A9D4987D4D7D7570C057F240C063A7EEDEDED7D
+                41E8D50DDBF6F6F61DA1C370B6B6B63EA34E59757AD48650DECECECEFDB2B232
+                2F2BCBCBCB530B0B0BB356AB359EBC9B23F178DC5A5555F5666565E53BACEFED
+                ED054A4B4B3B500CB3AE07CE8D8D8D1FC40425A6A7A7BF46DB554839E4E51C85
+                635CE59862F80475A1CD09C948560BB1A0A0E0312E8F203B90DD1C85633C1263
+                6A262B07103ACC100C9F9882C46767678B4F4E4EDE47997D2FEB7351E2624CCD
+                E4920A95144AC3C3C3EE9A9A9A719487B0206FE2AA6A416683DEB99CD8EAEAEA
+                BEB3D96CB52E97CB515858F8607373F343B6CBB7F545AD03F1C9C9C99FC6C6C6
+                BE1D1F1FFF666A6AEA37B429BD016B4F4FCF57BBBBBB4156F2F3F3E984DF4827
+                D440C5DC5CDC909720051025E7D9FE624B4BCBBBFBFBFB7F8BC492C07A08239C
+                3EC2BDCB9CC85B5A5AEA165D3565212DD0302AA7B0ACB487B0DD0E29F67ABD37
+                90D3D7855D4927F0262E5B13593BA076239310124D4EA7F30D51CF482412B11D
+                1D1D397134F06083FA40345B42A150F4F8F8D8575E5EDE8F2A3310A103773D1E
+                CF17ACC0C91F2B2A2A3E41F18C753D706026FD628272064EA4C229158659BF01
+                A5387E1A6B381C6658E802DE8E343F3F9F8FE265EB4113AACF42FDFDFD37914D
+                DEC204A97A26168BB19F545252F26A7D7D7D93DC6AB11C1E1E9E639FE86C6D6D
+                FD1ED57D08C3C8F010E24C310BA5CE2E99A402F24A575757C3D9D9D99A1C1889
+                C4C1C141C4EFF77F8A7B1CC70149F19F67A14C629F9898F06001FF256C4A1A1F
+                0804784C7EDA7862B803128ED34DA7A7A777296B6B6B6FB34DBEF50C1236BDD7
+                60FCB2B02781B0519AF914863BF0AF2CB4BABAFA39DA9416F573707640744D17
+                3617C9DA01B559C876310B89B2D2B3524747C79748937F62E6A3A3A3A3777C3E
+                1F0DE2828D247BE8885A07C89390C11754BA4C743E3434146C6B6BF30E0C0CDC
+                C691E221DA0C319E6871402DFC4E08E1D0B7D8DEDECEDD760F6288F124170792
+                795E2E3E039D600EE7EF917336A421394686B7AA88DA87F84D7C1FE7978F59C1
+                C2FC19975F1C0E47EA2C93133C37E172A3A8A8E83DD6B1913DC446D68EA26E1B
+                D9F37373734FB284D1CCCCCCDCA34E59B53ED81B1A1A3C989945A1C33082C1E0
+                5C7575F535EA9455A7476D08B19FABB6B6F65A7777B7CFED765FC747B8AE0900
+                B6C7D6D7D7173B3B3B032B2B2BFC9A3B6573F2661AB42C1C1ACCCDC505C98364
+                B5E8D24063F96B850B9F57553FCDB41AC1FE74446FE353D0683A9271E64D4C4C
+                4C4C4C2C168BE51F67F731BA0353F7470000000049454E44AE426082}
+              FileName = 
+                'C:\Users\TI\Desktop\Workspace\Projetos\Delphi\DeliveryControl\im' +
+                'ages\exit\res\mipmap-mdpi\ic_launcher.png'
+            end>
+          Align = Right
+          Cursor = crHandPoint
+          Position.X = 304.000000000000000000
+          Size.Width = 37.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          OnMouseUp = imageExitMouseUp
+        end
+      end
+    end
+  end
+  object actionListMenu: TActionList
+    Left = 280
+    Top = 56
+    object actionExit: TAction
+      Category = 'Menu'
+      Text = 'actionExit'
+      OnExecute = actionExitExecute
+    end
+    object actionExtratos: TAction
+      Category = 'Menu'
+      Text = 'actionExtratos'
+      OnExecute = actionExtratosExecute
+    end
+    object actionBoletos: TAction
+      Category = 'Menu'
+      Text = 'actionBoletos'
+      OnExecute = actionBoletosExecute
+    end
+    object actionEntregasDia: TAction
+      Category = 'Menu'
+      Text = 'Entregas Dia'
+      OnExecute = actionEntregasDiaExecute
+    end
+    object actionSuporte: TAction
+      Category = 'Menu'
+      Text = 'Suporte'
+      Hint = 'Suporte da remessa'
+      OnExecute = actionSuporteExecute
+    end
+  end
+end

@@ -1,0 +1,411 @@
+object view_SuporteRemessa: Tview_SuporteRemessa
+  Left = 0
+  Top = 0
+  Caption = 'Suporte de Remessas'
+  ClientHeight = 560
+  ClientWidth = 365
+  Fill.Kind = Solid
+  WindowState = wsMaximized
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object layoutPadrao: TLayout
+    Align = Contents
+    Size.Width = 365.000000000000000000
+    Size.Height = 560.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object layoutFiltro: TLayout
+      Align = Top
+      Position.Y = 33.000000000000000000
+      Size.Width = 365.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object labelDescricao: TLabel
+        Align = Top
+        StyledSettings = [Family]
+        Margins.Left = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Size.Width = 355.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000100000004000000}
+        TextSettings.FontColor = xFFF15A23
+        TextSettings.HorzAlign = Center
+        Text = 'Descri'#231#227'o'
+        TabOrder = 0
+      end
+    end
+    object layoutFooter: TLayout
+      Align = Bottom
+      Padding.Left = 20.000000000000000000
+      Padding.Top = 15.000000000000000000
+      Padding.Right = 20.000000000000000000
+      Padding.Bottom = 15.000000000000000000
+      Position.Y = 503.000000000000000000
+      Size.Width = 365.000000000000000000
+      Size.Height = 57.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+    end
+    object layoutTitle: TLayout
+      Align = Top
+      Size.Width = 365.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object rectangleTitle: TRectangle
+        Align = Client
+        Fill.Color = xFFF15A23
+        Sides = []
+        Size.Width = 365.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFF03A9F4
+        object imageExit: TImage
+          MultiResBitmap.Height = 48
+          MultiResBitmap.Width = 48
+          MultiResBitmap = <
+            item
+              Width = 48
+              Height = 48
+              PNG = {
+                89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+                87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                028A494441546843ED96CFAB125114C79DB17C92BE47C2A3168682885684C133
+                B0452BFB13AA8D7F86E0C295B81011576E5A066DDA1904BD28789B3706B9135C
+                28F803B79A12E6AFD110ED9C3B83E8F48C79CDCCE34EEF7EE080F79EC39C73EE
+                FDDE7BB530180C0683C1F84FE17ABDDEE37EBF1FC6DFD29479E0EAF57A783E9F
+                7F1745F147A7D3798A73928B7E48F18BC5A2B796C126044108A14F0AA117AED5
+                6A61F15DB97642BBDD3E8B442277D12F85D109AEFC93ED95471A8DC6792010B8
+                0FFE5B1843222984148F9A97EB2640F125AFD7FB00FC4E8C21911472E1CA379B
+                4DC14CC5EF681E8A3FF7FBFD0FC16FBE9547D96C15CF93480AD9A7F9AF1E8FC7
+                1CC55FB4F25BC5532D9B3FEE792CDEE7F33D02FF119815E3349A6A2E13CC55AB
+                D57030183CB5D96C77E4394BB95C5EB9DDEE5387C331B4DBEDBFAC56EB5A76FD
+                133CCFAFA7D3E93797CBF516862B69563B5CAD563B516ADE280683C13BC87920
+                A5FE3B6A0F1A5FA9540E97CBA5AA8F6A05F2A00C55D5A65642F8B1A3743AFD3C
+                1E8FBF713A9DA875024A0824750649E73044F95C4AC34A388E5B4D269352341A
+                7D0D43FCA66EDC003B4EA5522F47A3D150DE6D42B7DB1542A1101E622F9847A3
+                DD037381613EDD214DC04EBC1A8FC73B4DC0C1FB128BC530F14D394E8B19FA86
+                6002D2046CF54FB97E025CAF9F1389C421F835C9E82AD86E626727A0894F8542
+                6173466866D384524EB3D9EC632E97C39DA09EBD3B814DC081C7BF15D4B3F74C
+                98B509E54E7C305D13CA774214C5F7F97CDE2185D10D69021F3B38D81B39C11B
+                312C168B27E0A3FE7A45769A00498DB2D9EC0B98C3AB55F7068C5A116CE27626
+                9379067F8FB964325982F1106C894E3D31724BB1093B18E610C1742FFE2AC0E2
+                8D5C240683C1605C6B2C96DF6D98841222EBDC340000000049454E44AE426082}
+              FileName = 
+                'C:\Users\TI\Desktop\Workspace\Projetos\Delphi\DeliveryControl\im' +
+                'ages\arrow_exit\res\mipmap-mdpi\ic_launcher.png'
+            end>
+          Align = Left
+          Cursor = crHandPoint
+          Size.Width = 33.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          OnMouseUp = imageExitMouseUp
+        end
+      end
+      object labelTitle: TLabel
+        Align = Contents
+        StyledSettings = [Family]
+        Locked = True
+        Size.Width = 365.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000100000004000000}
+        TextSettings.FontColor = claWhite
+        TextSettings.HorzAlign = Center
+        Text = 'Delivery Control'
+        TabOrder = 1
+      end
+    end
+    object layoutBody: TLayout
+      Align = Client
+      Size.Width = 365.000000000000000000
+      Size.Height = 430.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      object TabControl1: TTabControl
+        Align = Client
+        Size.Width = 365.000000000000000000
+        Size.Height = 430.000000000000000000
+        Size.PlatformDefault = False
+        TabHeight = 49.000000000000000000
+        TabIndex = 0
+        TabOrder = 0
+        TabPosition = None
+        Sizes = (
+          365s
+          430s
+          365s
+          430s)
+        object TabItem1: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = True
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'Pesquisa'
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
+          object editParametro: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 1
+            TextSettings.Font.Size = 16.000000000000000000
+            Position.X = 56.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 193.000000000000000000
+            Size.Height = 41.000000000000000000
+            Size.PlatformDefault = False
+            TextPrompt = 'AWB/Remessa'
+            StyledSettings = [Family, Style, FontColor]
+          end
+          object editTelefone1: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Anchors = [akLeft, akTop, akRight]
+            TabOrder = 7
+            ReadOnly = True
+            TextSettings.Font.Size = 16.000000000000000000
+            Position.X = 16.000000000000000000
+            Position.Y = 56.000000000000000000
+            Size.Width = 233.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            StyledSettings = [Family, Style, FontColor]
+            OnMouseUp = Image2MouseUp
+          end
+          object editTelefone2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Anchors = [akLeft, akTop, akRight]
+            TabOrder = 6
+            ReadOnly = True
+            TextSettings.Font.Size = 16.000000000000000000
+            Position.X = 16.000000000000000000
+            Position.Y = 120.000000000000000000
+            Size.Width = 233.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            StyledSettings = [Family, Style, FontColor]
+          end
+          object editTelefone3: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Anchors = [akLeft, akTop, akRight]
+            TabOrder = 5
+            ReadOnly = True
+            TextSettings.Font.Size = 16.000000000000000000
+            Position.X = 16.000000000000000000
+            Position.Y = 88.000000000000000000
+            Size.Width = 233.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            StyledSettings = [Family, Style, FontColor]
+          end
+          object editEndereco: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            ReadOnly = True
+            StyledSettings = [Family, Style, FontColor]
+            TextSettings.Font.Size = 10.000000000000000000
+            TextSettings.WordWrap = True
+            Anchors = [akLeft, akTop, akRight]
+            Position.X = 16.000000000000000000
+            Position.Y = 152.000000000000000000
+            Size.Width = 233.000000000000000000
+            Size.Height = 113.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'memostyle'
+            TabOrder = 4
+            Viewport.Width = 229.000000000000000000
+            Viewport.Height = 109.000000000000000000
+          end
+          object editComplemento: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            ReadOnly = True
+            StyledSettings = [Family, Style, FontColor]
+            TextSettings.Font.Size = 10.000000000000000000
+            Anchors = [akLeft, akTop, akRight]
+            Position.X = 16.000000000000000000
+            Position.Y = 264.000000000000000000
+            Size.Width = 233.000000000000000000
+            Size.Height = 105.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'memostyle'
+            TabOrder = 3
+            Viewport.Width = 229.000000000000000000
+            Viewport.Height = 101.000000000000000000
+          end
+          object Image2: TImage
+            MultiResBitmap.Width = 48
+            MultiResBitmap = <
+              item
+                Width = 48
+                Height = 48
+                PNG = {
+                  89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+                  87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                  0503494441546843ED995B681C5518C7BF999DBDB5A9696B63A9A99A7A01B5B6
+                  E28328DE0BD587F8A4B551ACE0AD820F5244F0ADA07951BC8010F125A269D18A
+                  22568378292915B5A5A10AD58AB410D310B01A8D694C34DDDDD9D939FEFF6766
+                  D7ECBA9BDDC94EBBABE6078739677636F3FDCFF96E49648105FEE718FEB514D3
+                  1F953E3FD3280CD7BF72CC49A4BFBF7FFDC4C4C43ED524D016DA44DB3C132BC3
+                  1D5F343636F6B9FFDDA68136D1360C7A46815217A1C2563C3FE12D9B0BC33096
+                  E3328D91D33740911A4041558FA9815818459B5E2A80344BE096E31FB69513F0
+                  AFA254118F683962E0176F593BEAD4B4B8277E1077FAA418A629C6D9AB24B2EA
+                  229168CC7FA27E10032B713989E1E81BA03E01595B723F1D177BCF0EC91EFE4C
+                  8C6C5A543E4B6362B4B44AF4863B2576CB2631DBCEA305FE87F3235C01D98CA4
+                  77BF2CCEFE0F44A5FEF46FC2FA4299F1E77883D1B65A621BB7404817DE10F53E
+                  9E07E10980F1332F3C22EEF123791B4519A65817AE13B3FD626C7E4E72438745
+                  FD3C82795E8821F14DDB24DEF910E6F30BBD7004C06DD2BB7B243BB00B0BB849
+                  B245A21BBA247A13DC6445BBF70C712162F4A8D87B7749EEEBBDA2EC14CAD059
+                  927CF439B1D6DDE83F148C5004E4468F49EAC5ADE2C26D4C189FD8FA8C58575C
+                  8FEA51BE7CD0F0CCFBAF88FD499F5E1BAD2BA4E5D90FC58098A0941310F82CB3
+                  0858FA3C9573E7E7329E18B1A424EE784C22975CA5D76AEA37C9EEEFD7F33008
+                  2480A9D246B6D173F831DD662EE30BC412927CE0293FA52A71BE3FA8E3280C02
+                  09609E37F48B1502767DB1CF57C13CE77CD485357AAEA6C645CDFCA1E7F5124C
+                  008A543EAB98ED285241C089D1FFF95D9541BD40CD088340027485F5E74C9581
+                  71F93B09604133C3E9198309407BA04F00DBC83CCF54593378D61DFF111325E6
+                  9265C8424BBCFB751248007B1B13ED8176031429E6F95A718E1EF205E0A51D6B
+                  C5482CD6F37A09248059C4426FA3E001CA55BA48E902550535F9ABA4FB908578
+                  62709DE8359D9E1B85403001C06BCC56EBF7B3C2B248895D3920D5E4B8A4763C
+                  2DEEE4985E47AFED94C89ACBF53C0C020B6057C9C60C4D84B8D87DFBD33EF445
+                  A8CC2786BCDCEE64BD0151CEB75FC84C779738DFA07630732D5B29F1CD4F60CE
+                  380A87D273ACAD998381993D3BC5FEF87514B7296D1CDD8B79DE686D2B04ACF6
+                  793FD08DA5B89FCB49E482CB24821888DDFE70E07622DC765AB9E27C774052AF
+                  6DD7ED81A7E2EFCBAC89586BAF93C483DD92862B3947BED4D53BB6E16E49DC8F
+                  B80840B8027CD85EB0B7617BA02BAC1F0FCC32ACD4D6D5B749F4CA9BF193A392
+                  79AF47321FBDAA4F82C436DE2BF1BB1E176331325B0D9C160105E0FF6C0F7485
+                  65D58D2761185C6456C1A2D8CCBB2F217BBD85054E28627927C13EA9064EAF80
+                  00A477768BBDEF1D9C04ED503889FB247ECF933835FEDDAA32A1B4D36140B7E1
+                  CEEB38C149D8036F48E6EDE745A54F790F04A02102E8F3741BEE7CDE09EC8137
+                  B588A03444401EBA4DECD62DFE0A7E71EC2B14BE60DEDB9018980DDD863B4FE3
+                  176DEB11F3DCCA6D7AD3047139B8F3062AF55C344D1097A39AF195681A01F3E5
+                  BF29C0710A2ED63454B2A954003B30777878F8603389A02DB06910D3FC3FFA0A
+                  94FE66CDAC645A9635D4D1D17169229168B76D5B1A3D4646460EF5F6F66E1F1C
+                  1C1C857D36464144691AE59AA9B4056329069B13AE1B095D813DC6EF18FC3338
+                  D7150510DEE3C9D0705ECB3D7326A1B1ECBF6938AF452E54CDB8461B4F8A0C5E
+                  A0B910F90BA3CB9410236B6E590000000049454E44AE426082}
+                FileName = 
+                  'C:\Users\TI\Desktop\Workspace\Projetos\Delphi\DeliveryControl\im' +
+                  'ages\search\res\mipmap-mdpi\search.png'
+              end>
+            Position.X = 9.000000000000000000
+            Position.Y = 4.000000000000000000
+            Size.Width = 44.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            OnMouseUp = Image2MouseUp
+          end
+        end
+        object TabItem2: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'Scanner'
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
+          object codeReader: TCodeReader
+            CodeType = Code1DVertical
+            ShowMask = True
+            ShowIconTypes = True
+            PlaySound = True
+            BeepVolume = 1.000000000000000000
+            IConColor = claWhite
+            MaxImageWidth = 1000
+            ValidSamples = 2
+            OnCodeReady = codeReaderCodeReady
+            OnStart = codeReaderStart
+            OnStop = codeReaderStop
+            Size.Width = 352.000000000000000000
+            Size.Height = 530.000000000000000000
+            Size.PlatformDefault = False
+            Position.X = 8.000000000000000000
+            Anchors = [akLeft, akTop, akRight, akBottom]
+          end
+          object rectangleIniciar: TRectangle
+            Anchors = [akLeft, akTop, akRight]
+            Cursor = crHandPoint
+            Fill.Color = xFFF15A23
+            Margins.Top = 20.000000000000000000
+            Position.X = 144.000000000000000000
+            Position.Y = 428.000000000000000000
+            Size.Width = 365.000000000000000000
+            Size.Height = 45.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = xFFF15A23
+            XRadius = 4.000000000000000000
+            YRadius = 4.000000000000000000
+            OnMouseDown = rectangleIniciarMouseDown
+            OnMouseUp = rectangleIniciarMouseUp
+            object Label1: TLabel
+              Align = Client
+              StyledSettings = [Family]
+              Locked = True
+              Size.Width = 365.000000000000000000
+              Size.Height = 45.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 16.000000000000000000
+              TextSettings.Font.StyleExt = {00060000000000000004000000}
+              TextSettings.FontColor = claWhite
+              TextSettings.HorzAlign = Center
+              Text = 'Iniciar'
+              TabOrder = 0
+            end
+          end
+        end
+      end
+    end
+  end
+  object actionListExtratos: TActionList
+    Left = 280
+    Top = 8
+    object actionProcessar: TAction
+      Category = 'Suporte'
+      Text = 'actionProcessar'
+      OnExecute = actionProcessarExecute
+    end
+    object actionDetalhar: TAction
+      Category = 'Suporte'
+      Text = 'Detalhar'
+      OnExecute = actionDetalharExecute
+    end
+    object actionLerBarras: TAction
+      Category = 'Suporte'
+      Text = 'Barras'
+      Hint = 'Ler c'#243'digo de barras'
+      OnExecute = actionLerBarrasExecute
+    end
+    object actionLimparCampos: TAction
+      Category = 'Suporte'
+      Text = 'OK'
+      OnExecute = actionLimparCamposExecute
+    end
+    object actionIniciar: TAction
+      Category = 'Suporte'
+      Text = 'Iniciar'
+      OnExecute = actionIniciarExecute
+    end
+    object actionParar: TAction
+      Category = 'Suporte'
+      Text = 'Parar'
+      OnExecute = actionPararExecute
+    end
+  end
+end

@@ -1,0 +1,398 @@
+object view_Extratos2: Tview_Extratos2
+  Left = 0
+  Top = 0
+  Caption = 'Extrato Quinzenal'
+  ClientHeight = 601
+  ClientWidth = 360
+  Fill.Kind = Solid
+  WindowState = wsMaximized
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object layoutPadrao: TLayout
+    Align = Contents
+    Size.Width = 360.000000000000000000
+    Size.Height = 601.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object layoutFiltro: TLayout
+      Align = Top
+      Position.Y = 33.000000000000000000
+      Size.Width = 360.000000000000000000
+      Size.Height = 144.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object comboBoxAno: TComboBox
+        Position.X = 112.000000000000000000
+        Position.Y = 96.000000000000000000
+        Size.Width = 57.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'comboboxstyle'
+        TabOrder = 5
+      end
+      object comboBoxDia: TComboBox
+        Items.Strings = (
+          '...'
+          '10'
+          '15'
+          '25'
+          '31')
+        ItemIndex = 0
+        Position.X = 256.000000000000000000
+        Position.Y = 96.000000000000000000
+        Size.Width = 49.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'comboboxstyle'
+        TabOrder = 9
+      end
+      object comboBoxMes: TComboBox
+        Items.Strings = (
+          '...'
+          'JAN'
+          'FEV'
+          'MAR'
+          'ABR'
+          'MAI'
+          'JUN'
+          'JUL'
+          'AGO'
+          'SET'
+          'OUT'
+          'NOV'
+          'DEZ')
+        ItemIndex = 0
+        Position.X = 176.000000000000000000
+        Position.Y = 96.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'comboboxstyle'
+        TabOrder = 7
+      end
+      object comboBoxTipo: TComboBox
+        Items.Strings = (
+          'Selecione...'
+          'Pr'#233'vio'
+          'Fechado')
+        ItemIndex = 0
+        Position.X = 9.000000000000000000
+        Position.Y = 96.000000000000000000
+        Size.Width = 96.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+      end
+      object imageSearch: TImage
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0503494441546843ED995B681C5518C7BF999DBDB5A9696B63A9A99A7A01B5B6
+              E28328DE0BD587F8A4B551ACE0AD820F5244F0ADA07951BC8010F125A269D18A
+              22568378292915B5A5A10AD58AB410D310B01A8D694C34DDDDD9D939FEFF6766
+              D7ECBA9BDDC94EBBABE6078739677636F3FDCFF96E49648105FEE718FEB514D3
+              1F953E3FD3280CD7BF72CC49A4BFBF7FFDC4C4C43ED524D016DA44DB3C132BC3
+              1D5F343636F6B9FFDDA68136D1360C7A46815217A1C2563C3FE12D9B0BC33096
+              E3328D91D33740911A4041558FA9815818459B5E2A80344BE096E31FB69513F0
+              AFA254118F683962E0176F593BEAD4B4B8277E1077FAA418A629C6D9AB24B2EA
+              229168CC7FA27E10032B713989E1E81BA03E01595B723F1D177BCF0EC91EFE4C
+              8C6C5A543E4B6362B4B44AF4863B2576CB2631DBCEA305FE87F3235C01D98CA4
+              77BF2CCEFE0F44A5FEF46FC2FA4299F1E77883D1B65A621BB7404817DE10F53E
+              9E07E10980F1332F3C22EEF123791B4519A65817AE13B3FD626C7E4E72438745
+              FD3C82795E8821F14DDB24DEF910E6F30BBD7004C06DD2BB7B243BB00B0BB849
+              B245A21BBA247A13DC6445BBF70C712162F4A8D87B7749EEEBBDA2EC14CAD059
+              927CF439B1D6DDE83F148C5004E4468F49EAC5ADE2C26D4C189FD8FA8C58575C
+              8FEA51BE7CD0F0CCFBAF88FD499F5E1BAD2BA4E5D90FC58098A0941310F82CB3
+              0858FA3C9573E7E7329E18B1A424EE784C22975CA5D76AEA37C9EEEFD7F33008
+              2480A9D246B6D173F831DD662EE30BC412927CE0293FA52A71BE3FA8E3280C02
+              09609E37F48B1502767DB1CF57C13CE77CD485357AAEA6C645CDFCA1E7F5124C
+              008A543EAB98ED285241C089D1FFF95D9541BD40CD088340027485F5E74C9581
+              71F93B09604133C3E9198309407BA04F00DBC83CCF54593378D61DFF111325E6
+              9265C8424BBCFB751248007B1B13ED8176031429E6F95A718E1EF205E0A51D6B
+              C5482CD6F37A09248059C4426FA3E001CA55BA48E902550535F9ABA4FB908578
+              62709DE8359D9E1B85403001C06BCC56EBF7B3C2B248895D3920D5E4B8A4763C
+              2DEEE4985E47AFED94C89ACBF53C0C020B6057C9C60C4D84B8D87DFBD33EF445
+              A8CC2786BCDCEE64BD0151CEB75FC84C779738DFA07630732D5B29F1CD4F60CE
+              380A87D273ACAD998381993D3BC5FEF87514B7296D1CDD8B79DE686D2B04ACF6
+              793FD08DA5B89FCB49E482CB24821888DDFE70E07622DC765AB9E27C774052AF
+              6DD7ED81A7E2EFCBAC89586BAF93C483DD92862B3947BED4D53BB6E16E49DC8F
+              B80840B8027CD85EB0B7617BA02BAC1F0FCC32ACD4D6D5B749F4CA9BF193A392
+              79AF47321FBDAA4F82C436DE2BF1BB1E176331325B0D9C160105E0FF6C0F7485
+              65D58D2761185C6456C1A2D8CCBB2F217BBD85054E28627927C13EA9064EAF80
+              00A477768BBDEF1D9C04ED503889FB247ECF933835FEDDAA32A1B4D36140B7E1
+              CEEB38C149D8036F48E6EDE745A54F790F04A02102E8F3741BEE7CDE09EC8137
+              B588A03444401EBA4DECD62DFE0A7E71EC2B14BE60DEDB9018980DDD863B4FE3
+              176DEB11F3DCCA6D7AD3047139B8F3062AF55C344D1097A39AF195681A01F3E5
+              BF29C0710A2ED63454B2A954003B30777878F8603389A02DB06910D3FC3FFA0A
+              94FE66CDAC645A9635D4D1D17169229168B76D5B1A3D4646460EF5F6F66E1F1C
+              1C1C857D36464144691AE59AA9B4056329069B13AE1B095D813DC6EF18FC3338
+              D7150510DEE3C9D0705ECB3D7326A1B1ECBF6938AF452E54CDB8461B4F8A0C5E
+              A0B910F90BA3CB9410236B6E590000000049454E44AE426082}
+            FileName = 
+              'C:\Users\TI\Desktop\Workspace\Projetos\Delphi\DeliveryControl\im' +
+              'ages\search\res\mipmap-mdpi\search.png'
+          end>
+        Align = Right
+        Cursor = crHandPoint
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Position.X = 311.000000000000000000
+        Position.Y = 64.000000000000000000
+        Size.Width = 41.000000000000000000
+        Size.Height = 72.000000000000000000
+        Size.PlatformDefault = False
+        OnMouseUp = imageSearchMouseUp
+      end
+      object labelAno: TLabel
+        StyledSettings = [Family, Size, Style]
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 15.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Position.X = 113.000000000000000000
+        Position.Y = 71.000000000000000000
+        Size.Width = 48.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.FontColor = xFFF15A23
+        Text = 'Ano:'
+        TabOrder = 4
+      end
+      object labelDia: TLabel
+        StyledSettings = [Family, Size, Style]
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 15.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Position.X = 257.000000000000000000
+        Position.Y = 71.000000000000000000
+        Size.Width = 48.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.FontColor = xFFF15A23
+        Text = 'Dia:'
+        TabOrder = 8
+      end
+      object labelMes: TLabel
+        StyledSettings = [Family, Size, Style]
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 15.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Position.X = 175.000000000000000000
+        Position.Y = 71.000000000000000000
+        Size.Width = 74.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.FontColor = xFFF15A23
+        Text = 'M'#234's:'
+        TabOrder = 6
+      end
+      object labelTipo: TLabel
+        StyledSettings = [Family, Size, Style]
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 15.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Position.X = 9.000000000000000000
+        Position.Y = 71.000000000000000000
+        Size.Width = 88.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.FontColor = xFFF15A23
+        Text = 'Extrato:'
+        TabOrder = 2
+      end
+      object labelDEscricao: TLabel
+        Align = Top
+        StyledSettings = [Family]
+        Margins.Left = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Size.Width = 350.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000100000004000000}
+        TextSettings.FontColor = xFFF15A23
+        TextSettings.HorzAlign = Center
+        Text = 'Descri'#231#227'o'
+        TabOrder = 1
+      end
+      object labelTitulo: TLabel
+        Align = Top
+        StyledSettings = [Family]
+        Margins.Left = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 28.000000000000000000
+        Size.Width = 350.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000100000004000000}
+        TextSettings.FontColor = xFFF15A23
+        Text = 'Informe a data de pagamento'
+        TabOrder = 0
+      end
+    end
+    object layoutFooter: TLayout
+      Align = Bottom
+      Position.Y = 552.000000000000000000
+      Size.Width = 360.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object labelPeriodo: TLabel
+        Align = Center
+        StyledSettings = [Family, Size, Style]
+        Margins.Left = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Size.Width = 350.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.FontColor = xFFF15A23
+        TabOrder = 1
+      end
+    end
+    object layoutTitle: TLayout
+      Align = Top
+      Size.Width = 360.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object rectangleTitle: TRectangle
+        Align = Client
+        Fill.Color = xFFF15A23
+        Sides = []
+        Size.Width = 360.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFF03A9F4
+        object imageExit: TImage
+          MultiResBitmap.Height = 48
+          MultiResBitmap.Width = 48
+          MultiResBitmap = <
+            item
+              Width = 48
+              Height = 48
+              PNG = {
+                89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+                87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                028A494441546843ED96CFAB125114C79DB14CD2F74C88DA8482885684C133B0
+                452BFB13AA8D7F86E0C295B81011576E5A066DDA1904BD28789B37062D051105
+                7FE05653C2FC352AA29D7367109D9E31AF9979DCA9FB8103DE7B0E73BEE7DE73
+                EFD5C26030180C06E31F85EBF57A8FFBFD7E187F4B53E681ABD7EBE1F97CFE5D
+                14C51F9D4EE729CE492EFA21E2178B456F238345088210429F14422F5CABD542
+                F15D593BA1DD6E9F452291BBE897C2E80457FEC9EECA238D46E33C1008DC07FF
+                4D8C21911442C463CFCBBA0920BEE4F57A1F80DF89312492422E5CF966B32998
+                49FC5ECF83F873BFDFFF10FCE65B796C9B1DF13C89A490433DFFD5E3F19843FC
+                452BBF239EEAB6F9ED9E47F13E9FEF11F88FC1AC18A7D154739960AE52A98483
+                C1E0A9CD66BB23CF59AAD5EADAE5729D3A1C8EA1DD6E5F5AADD68DECFA2B789E
+                DF4CA7D36F6EB7FB2D0CD7D2AC76B85AAD76A2EC79A3180C06EF20E70D29F59F
+                517BD0F872B97CB45AAD547D542B9007DB509536B52D841F3B4EA7D3CFE3F1F8
+                1BA7D389BD4EC0165A2E976790740E436C9F4BF5B0128EE3D693C9A4148D465F
+                C310BFA91BD7C06EA752A997A3D16828EF36A1DBED0AA150080FB117CCA3D1EE
+                81B9C1309FEE902260275E8DC7E3BD22E0E07D89C56298F8BA1CA7C50C7D4330
+                012902B6FAA7AC9F00D7EBE7442271047E4D6D7415EC16B1B71350C4A742A1B0
+                3D2334B32D42D94EB3D9EC632E97C39DA09E833B8145C081C7BF15D473F04C98
+                B508E54E7C305D11CA774214C5F7F97CDE2185D10D29021F3B38D8DB76823762
+                582C164FC047FDF58AEC15012D35CA66B32F600EAF56DD0B306A45B0885B994C
+                E619FC3DE692C96409C643B0153AF5C4C82DC522EC60984304D35DFC5580E28D
+                5C240683C160FCD7582CBF00A4B587127AB3133D0000000049454E44AE426082}
+              FileName = 
+                'C:\Users\TI\Desktop\Workspace\Projetos\Delphi\DeliveryControl\im' +
+                'ages\arrow_exit\res\mipmap-mdpi\ic_launcher.png'
+            end>
+          Align = Left
+          Cursor = crHandPoint
+          Size.Width = 33.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          OnMouseUp = imageExitMouseUp
+        end
+      end
+      object labelTitle: TLabel
+        Align = Contents
+        StyledSettings = [Family]
+        Locked = True
+        Size.Width = 360.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000100000004000000}
+        TextSettings.FontColor = claWhite
+        TextSettings.HorzAlign = Center
+        Text = 'Delivery Control'
+        TabOrder = 1
+      end
+    end
+    object StringGridExtrato: TStringGrid
+      Align = Top
+      CanFocus = True
+      ClipChildren = True
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 182.000000000000000000
+      Size.Width = 350.000000000000000000
+      Size.Height = 99.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 11.000000000000000000
+      StyledSettings = [Family, Style, FontColor]
+      TabOrder = 3
+      Options = [ColumnResize, ColumnMove, ColLines, RowLines, Tabs, Header, HeaderClick, AutoDisplacement]
+      Viewport.Width = 345.000000000000000000
+      Viewport.Height = 67.000000000000000000
+      object integerColumnQtde: TIntegerColumn
+        Header = 'Qtde.'
+        Size.Width = 41.000000000000000000
+      end
+      object stringColumnDescricao: TStringColumn
+        Header = 'Descri'#231#227'o'
+        Size.Width = 167.000000000000000000
+      end
+      object currencyColumnUnitario: TCurrencyColumn
+        Header = 'Unit.'
+        Size.Width = 47.000000000000000000
+      end
+      object currencyColumnValor: TCurrencyColumn
+        Header = 'Total'
+        Size.Width = 71.000000000000000000
+      end
+    end
+    object ListView1: TListView
+      ItemAppearanceClassName = 'TListItemAppearance'
+      ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+      HeaderAppearanceClassName = 'TListHeaderObjects'
+      FooterAppearanceClassName = 'TListHeaderObjects'
+      EditMode = True
+      Align = Client
+      Size.Width = 360.000000000000000000
+      Size.Height = 266.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      StyleLookup = 'listviewstyle'
+    end
+  end
+  object actionListExtratos: TActionList
+    Left = 280
+    Top = 8
+    object actionProcessar: TAction
+      Category = 'Extratos'
+      Text = 'actionProcessar'
+      OnExecute = actionProcessarExecute
+    end
+  end
+end

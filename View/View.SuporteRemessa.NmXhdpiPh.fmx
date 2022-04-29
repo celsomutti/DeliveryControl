@@ -1,0 +1,130 @@
+inherited view_SuporteRemessa_NmXhdpiPh: Tview_SuporteRemessa_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  DesignerMasterStyle = 0
+  inherited layoutPadrao: TLayout
+    Size.Width = 400.000000000000000000
+    Size.Height = 615.000000000000000000
+    inherited layoutFiltro: TLayout
+      Margins.Top = 10.000000000000000000
+      Position.Y = 43.000000000000000000
+      Size.Width = 400.000000000000000000
+      inherited labelDescricao: TLabel
+        Margins.Top = 15.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Position.Y = 15.000000000000000000
+        Size.Width = 390.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000100000004000000}
+      end
+    end
+    inherited layoutFooter: TLayout
+      Position.Y = 558.000000000000000000
+      Size.Width = 400.000000000000000000
+    end
+    inherited layoutTitle: TLayout
+      Size.Width = 400.000000000000000000
+      inherited rectangleTitle: TRectangle
+        Size.Width = 400.000000000000000000
+        inherited imageExit: TImage
+          MultiResBitmap.Height = 48
+          MultiResBitmap.Width = 48
+          MultiResBitmap = <
+            item
+              Width = 48
+              Height = 48
+              PNG = {
+                89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+                87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                028A494441546843ED96CFAB125114C79DB154D2F74878D4461444B4220C9E81
+                6FD1CAFE846AE39F21B870252E44C4959B96419B7606412F0ADEE68D814BC185
+                823F70AB2961FE1A0DD1CEB933884ECF98D7CC3CEED4FDC001EF3D8739DF73EF
+                B9F76A6130180C0683F18FC2F5FBFD2783C12082BFA529F3C0351A8DC862B1F8
+                268AE2F76EB77B8673928B7E88F8E572D9DFC86011822084D12785D00BD76EB7
+                517C4FD64EE8743A17D168F43EFAA5303AC1957FBABBF248B3D9BC0C06830FC0
+                7F076348248510F1D8F3B26E02882FFB7CBE87E077610C89A4902B57BED56A09
+                6612BFD7F320FE3210083C02BFF9561EDB66473C4F2229E450CF7FF57ABDE610
+                7FD5CAEF88A7BA6D7EBBE751BCDFEF7F0CFE63302BC66934D55C2798ABD56A91
+                5028746EB3D9EEC973964AA5B2F6783CE74EA773E470387E5AADD68DECFA2B78
+                9EDFCC66B38ADBED7E0BC3B534AB1DAE5EAF9F2A7BDE2886C3E13BC8699752FF
+                19B5078DAF56AB47ABD54AD547B50279B00D556953DB42F8B1E34C26F33C9148
+                BC71B95CD8EB046C21BBDD7E01491730C4F6B9560F2BE1386E3D9D4ECBB158EC
+                350CF19BBA710BEC249D4EBF1C8FC72379B709BD5E4F0887C378887D605E8DE6
+                017383613EDD2145C04EBC9A4C267B45C0C1FB128FC731F16D394E8B19FA8660
+                0252046CF50F593F01AED7CFC964F208FC9ADAE826D82D626F27A0884FC56271
+                7B4668665B84B29DE6F3F9C77C3E8F3B413D0777028B80038F7F2BA8E7E09930
+                6B11CA9DF860BA2294EF84288AEF0B8582530AA31B52043E7670B0B7ED046FC4
+                A8542A9D828FFAEB15D92B025A6A9CCBE55EC01C5EADBA1760D48A601177B3D9
+                EC33F87BCCA552A9328C47602B74EA89915B8A4538C0308708A6BBF89B00C51B
+                B9480C0683C1F8AFB1587E016D80841288E351E60000000049454E44AE426082}
+              FileName = 
+                'C:\Users\TI\Desktop\Workspace\Projetos\Delphi\DeliveryControl\im' +
+                'ages\arrow_exit\res\mipmap-mdpi\ic_launcher.png'
+            end>
+        end
+      end
+      inherited labelTitle: TLabel
+        Size.Width = 400.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000100000004000000}
+      end
+    end
+    inherited layoutBody: TLayout
+      Size.Width = 400.000000000000000000
+      Size.Height = 475.000000000000000000
+      inherited TabControl1: TTabControl
+        Size.Width = 400.000000000000000000
+        Size.Height = 475.000000000000000000
+        Sizes = (
+          400s
+          475s
+          400s
+          475s)
+        inherited TabItem1: TTabItem
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
+          inherited editParametro: TEdit
+            Size.Width = 400.000000000000000000
+            Size.Height = 32.000000000000000000
+          end
+          inherited editTelefone1: TEdit
+            Size.Width = 526.000000000000000000
+          end
+          inherited editTelefone2: TEdit
+            Size.Width = 526.000000000000000000
+          end
+          inherited editTelefone3: TEdit
+            Size.Width = 526.000000000000000000
+          end
+          inherited editEndereco: TMemo
+            Size.Width = 479.000000000000000000
+            Viewport.Width = 479.000000000000000000
+            Viewport.Height = 113.000000000000000000
+          end
+          inherited editComplemento: TMemo
+            Size.Width = 479.000000000000000000
+            Viewport.Width = 479.000000000000000000
+            Viewport.Height = 105.000000000000000000
+          end
+          inherited Image2: TImage
+            MultiResBitmap.Width = 48
+            Anchors = [akTop]
+          end
+        end
+        inherited TabItem2: TTabItem
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
+          inherited codeReader: TCodeReader
+            Size.Width = 466.000000000000000000
+            Size.Height = 665.000000000000000000
+          end
+          inherited rectangleIniciar: TRectangle
+            Size.Width = 479.000000000000000000
+            inherited Label1: TLabel
+              Size.Width = 479.000000000000000000
+              TextSettings.Font.StyleExt = {00060000000000000004000000}
+            end
+          end
+        end
+      end
+    end
+  end
+end

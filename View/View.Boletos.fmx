@@ -1,0 +1,313 @@
+object view_Boletos: Tview_Boletos
+  Left = 0
+  Top = 0
+  Caption = 'Boletos'
+  ClientHeight = 550
+  ClientWidth = 409
+  Fill.Kind = Solid
+  WindowState = wsMaximized
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnActivate = FormActivate
+  DesignerMasterStyle = 3
+  object layoutPadrao: TLayout
+    Align = Contents
+    Size.Width = 409.000000000000000000
+    Size.Height = 550.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object layoutTitle: TLayout
+      Align = Top
+      Size.Width = 409.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object rectangleTitle: TRectangle
+        Align = Client
+        Fill.Color = xFF03A9F4
+        Size.Width = 409.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFF03A9F4
+        object imageExit: TImage
+          MultiResBitmap.Height = 48
+          MultiResBitmap.Width = 48
+          MultiResBitmap = <
+            item
+              Width = 48
+              Height = 48
+              PNG = {
+                89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+                87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                0289494441546843ED96CFAB125114C7BD63F9247D8F84476D4241442BC2E019
+                D8A295FD09D5C63F4370E14A5C88882B372D8336ED0C825E14BCCD1B8396820B
+                057FE056531EE6AFD110ED9C3B83E8F48C79CDCCE34EDD0F1C98B9E730F79C7B
+                BEF7DEB171381C0E87C3F94721BD5EEF71BFDF8FE0B33C641D48BD5E8FCCE7F3
+                EF60179D4EE7298EC92EF6A1C92F168BDE5A4192A40B5114C3E89343D885B45A
+                2D4CBEABE44E69B7DB67D168F42EFAE53036C1957FB2BDF248A3D1380F0683F7
+                C17F0B63682483D0E451F34ADE1448BEECF3F91E80DF8D313492412E5DF966B3
+                295A29F91DCD43F2E78140E021F8ADB7F2289BADE4051AC920FB34FFD5EBF55A
+                23F9CB567E2B79A665F3DB398FC9FBFDFE47E03F02B3639C4ED3CC558249B55A
+                8D8442A15387C3714719B3818C56F0BF73EA72B9864EA7F3A7DD6E5F2BAEBF42
+                1084F5743AFDE6F178DEC2EB4A1ED50FA9D56A276ACD9BC560307807731EC853
+                FF19AD1B4DA8542A87CBE552D347F502F3A00C35E5A65542F8B1A34C26F33C91
+                48BC71BBDDA8750A4A08BA730693CEE115E573250DAB2184AC26934939168BBD
+                8657FCA661DC003B4EA7D32F47A3D150E936A5DBED8AE1701837B10FCCABD3EE
+                8179C0703EC3A14540275E8DC7E39D2260E37D89C7E338F14D254E8F997A87E0
+                04B40868F50F257F0A1CAF9F93C9E421F875C9E83AD82E62A71350C4A762B1B8
+                D9232CB329422DA7D96CF6319FCF632798676F27B008D8F0F85BC13C7BF78455
+                8B5077E283E58A50DF139224BD2F140A2E398C6D681178D9C1C6DEC809EE8861
+                A9543A011FF3C72BB25304486A94CBE55EC0181EAD861760D68A6011B7B3D9EC
+                33F83D26A954AA0CEF43B0253A8DC4CC9662114E309C4302333CF9EB00933773
+                91381C0E87F35F63B3FD02FA048A15717483590000000049454E44AE426082}
+              FileName = 
+                'C:\Users\TI\Desktop\Workspace\Projetos\Delphi\DeliveryControl\im' +
+                'ages\arrow_return\res\mipmap-mdpi\ic_launcher.png'
+            end>
+          Align = Left
+          Cursor = crHandPoint
+          Size.Width = 33.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          OnMouseUp = imageExitMouseUp
+        end
+        object labelTitle: TLabel
+          Align = Contents
+          StyledSettings = [Family]
+          Locked = True
+          Size.Width = 409.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 20.000000000000000000
+          TextSettings.Font.StyleExt = {00060000000100000004000000}
+          TextSettings.FontColor = claWhite
+          TextSettings.HorzAlign = Center
+          Text = 'Delivery Control'
+          TabOrder = 0
+        end
+      end
+    end
+    object layoutFiltro: TLayout
+      Align = Top
+      Margins.Top = 10.000000000000000000
+      Position.Y = 43.000000000000000000
+      Size.Width = 409.000000000000000000
+      Size.Height = 142.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object labelData: TLabel
+        StyledSettings = [Family, Size, Style]
+        Position.X = 16.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 129.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.FontColor = claDodgerblue
+        Text = 'Data Cr'#233'dito:'
+        TabOrder = 1
+      end
+      object buttonProcurar: TButton
+        Action = actionProcurar
+        Enabled = True
+        StyledSettings = [Family, Size, Style]
+        IconTintColor = claDodgerblue
+        ImageIndex = -1
+        Position.X = 136.000000000000000000
+        Position.Y = 16.000000000000000000
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'searchtoolbutton'
+        TabOrder = 3
+      end
+      object editLinha: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 4
+        KeyboardType = NumberPad
+        TextSettings.Font.Size = 10.000000000000000000
+        Position.X = 16.000000000000000000
+        Position.Y = 96.000000000000000000
+        Size.Width = 265.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Family, Style]
+      end
+      object labelCodigo: TLabel
+        StyledSettings = [Family, Size, Style]
+        Position.X = 16.000000000000000000
+        Position.Y = 77.000000000000000000
+        Size.Width = 265.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.FontColor = claDodgerblue
+        Text = 'Linha Digitalizavel:'
+        TabOrder = 0
+      end
+      object buttonGravar: TButton
+        Action = actionGravar
+        Enabled = True
+        IconTintColor = claDodgerblue
+        ImageIndex = -1
+        Position.X = 288.000000000000000000
+        Position.Y = 88.000000000000000000
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'additembutton'
+        TabOrder = 2
+      end
+      object labelValor: TLabel
+        StyledSettings = [Family, Size, Style]
+        Position.X = 192.000000000000000000
+        Position.Y = 8.000000000000000000
+        TextSettings.FontColor = claDodgerblue
+        Text = 'Valor:'
+        TabOrder = 6
+      end
+      object labelValorValor: TLabel
+        StyledSettings = [Family]
+        Position.X = 192.000000000000000000
+        Position.Y = 32.000000000000000000
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claDodgerblue
+        TextSettings.HorzAlign = Trailing
+        Text = '0,00'
+        TabOrder = 5
+      end
+      object comboEditDatas: TComboEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 7
+        KeyboardType = NumbersAndPunctuation
+        ItemHeight = 19.000000000000000000
+        ItemIndex = -1
+        TextSettings.Font.Size = 11.000000000000000000
+        Position.X = 16.000000000000000000
+        Position.Y = 28.000000000000000000
+        StyledSettings = [Family, Style]
+        Size.Width = 121.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object stringGridBoletos: TStringGrid
+      Align = Client
+      CanFocus = True
+      ClipChildren = True
+      Cursor = crHandPoint
+      Margins.Left = 20.000000000000000000
+      Margins.Top = 20.000000000000000000
+      Margins.Right = 20.000000000000000000
+      Margins.Bottom = 20.000000000000000000
+      Size.Width = 369.000000000000000000
+      Size.Height = 231.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'gridstyle'
+      TextSettings.Font.Size = 10.000000000000000000
+      TextSettings.HorzAlign = Center
+      StyledSettings = [Family, Style]
+      TabOrder = 2
+      RowCount = 0
+      Options = [ColumnResize, ColumnMove, ColLines, RowLines, Tabs, Header, HeaderClick, AutoDisplacement]
+      Viewport.Width = 369.000000000000000000
+      Viewport.Height = 199.000000000000000000
+      object columnLinha: TColumn
+        Header = 'C'#243'digo Linha'
+        Size.Width = 161.000000000000000000
+      end
+      object Column1: TColumn
+        Header = 'Vencimento'
+        Size.Width = 87.000000000000000000
+      end
+      object Column2: TColumn
+        Header = 'Valor'
+        Size.Width = 79.000000000000000000
+      end
+    end
+    object layoutRodape: TLayout
+      Align = Bottom
+      Position.Y = 456.000000000000000000
+      Size.Width = 409.000000000000000000
+      Size.Height = 94.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      object labelSaldo: TLabel
+        Anchors = [akTop, akRight]
+        StyledSettings = [Family, Size, Style]
+        Position.X = 168.000000000000000000
+        Position.Y = 3.000000000000000000
+        TextSettings.FontColor = claDodgerblue
+        Text = 'Saldo:'
+        TabOrder = 0
+      end
+      object labelValorSaldo: TLabel
+        Anchors = [akTop, akRight]
+        StyledSettings = [Family]
+        Position.X = 280.000000000000000000
+        Position.Y = 3.000000000000000000
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claDodgerblue
+        TextSettings.HorzAlign = Trailing
+        Text = '0,00'
+        TabOrder = 1
+      end
+      object buttonSAlvar: TButton
+        Action = actionSalvar
+        Enabled = True
+        IconTintColor = claDodgerblue
+        ImageIndex = -1
+        Position.X = 112.000000000000000000
+        Position.Y = 32.000000000000000000
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'donetoolbutton'
+        TabOrder = 3
+      end
+      object buttonCancelar: TButton
+        Action = actionCancelar
+        Enabled = True
+        IconTintColor = claDodgerblue
+        ImageIndex = -1
+        Position.X = 208.000000000000000000
+        Position.Y = 34.000000000000000000
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'deletetoolbutton'
+        TabOrder = 2
+      end
+    end
+  end
+  object actionListBoleto: TActionList
+    Left = 368
+    Top = 11
+    object actionProcurar: TAction
+      Category = 'Boletos'
+      Text = 'Procurar'
+      OnExecute = actionProcurarExecute
+    end
+    object actionGravar: TAction
+      Category = 'Boletos'
+      Text = 'gravar'
+      OnExecute = actionGravarExecute
+    end
+    object actionExit: TAction
+      Category = 'Boletos'
+      Text = 'actionExit'
+      OnExecute = actionExitExecute
+    end
+    object actionSalvar: TAction
+      Category = 'Boletos'
+      Text = 'Salvar'
+      OnExecute = actionSalvarExecute
+    end
+    object actionCancelar: TAction
+      Category = 'Boletos'
+      Text = 'Cancelar'
+      OnExecute = actionCancelarExecute
+    end
+  end
+end

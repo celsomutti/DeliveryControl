@@ -1,0 +1,314 @@
+object view_EntregasDia: Tview_EntregasDia
+  Left = 0
+  Top = 0
+  Caption = 'Entregas por Dia'
+  ClientHeight = 601
+  ClientWidth = 360
+  Fill.Kind = Solid
+  WindowState = wsMaximized
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object layoutPadrao: TLayout
+    Align = Contents
+    Size.Width = 360.000000000000000000
+    Size.Height = 601.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object layoutFiltro: TLayout
+      Align = Top
+      Position.Y = 33.000000000000000000
+      Size.Width = 360.000000000000000000
+      Size.Height = 104.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object imageSearch: TImage
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0503494441546843ED995B681C5518C7BF999DBDB5A9696B63A9A99A7A01B5B6
+              E28328DE0BD587F8A4B551ACE0AD820F5244F0ADA07951BC8010F125A269D18A
+              22568378292915B5A5A10AD58AB410D310B01A8D694C34DDDDD9D939FEFF6766
+              D7ECBA9BDDC94EBBABE6078739677636F3FDCFF96E49648105FEE718FEB514D3
+              1F953E3FD3280CD7BF72CC49A4BFBF7FFDC4C4C43ED524D016DA44DB3C132BC3
+              1D5F343636F6B9FFDDA68136D1360C7A46815217A1C2563C3FE12D9B0BC33096
+              E3328D91D33740911A4041558FA9815818459B5E2A80344BE096E31FB69513F0
+              AFA254118F683962E0176F593BEAD4B4B8277E1077FAA418A629C6D9AB24B2EA
+              229168CC7FA27E10032B713989E1E81BA03E01595B723F1D177BCF0EC91EFE4C
+              8C6C5A543E4B6362B4B44AF4863B2576CB2631DBCEA305FE87F3235C01D98CA4
+              77BF2CCEFE0F44A5FEF46FC2FA4299F1E77883D1B65A621BB7404817DE10F53E
+              9E07E10980F1332F3C22EEF123791B4519A65817AE13B3FD626C7E4E72438745
+              FD3C82795E8821F14DDB24DEF910E6F30BBD7004C06DD2BB7B243BB00B0BB849
+              B245A21BBA247A13DC6445BBF70C712162F4A8D87B7749EEEBBDA2EC14CAD059
+              927CF439B1D6DDE83F148C5004E4468F49EAC5ADE2C26D4C189FD8FA8C58575C
+              8FEA51BE7CD0F0CCFBAF88FD499F5E1BAD2BA4E5D90FC58098A0941310F82CB3
+              0858FA3C9573E7E7329E18B1A424EE784C22975CA5D76AEA37C9EEEFD7F33008
+              2480A9D246B6D173F831DD662EE30BC412927CE0293FA52A71BE3FA8E3280C02
+              09609E37F48B1502767DB1CF57C13CE77CD485357AAEA6C645CDFCA1E7F5124C
+              008A543EAB98ED285241C089D1FFF95D9541BD40CD088340027485F5E74C9581
+              71F93B09604133C3E9198309407BA04F00DBC83CCF54593378D61DFF111325E6
+              9265C8424BBCFB751248007B1B13ED8176031429E6F95A718E1EF205E0A51D6B
+              C5482CD6F37A09248059C4426FA3E001CA55BA48E902550535F9ABA4FB908578
+              62709DE8359D9E1B85403001C06BCC56EBF7B3C2B248895D3920D5E4B8A4763C
+              2DEEE4985E47AFED94C89ACBF53C0C020B6057C9C60C4D84B8D87DFBD33EF445
+              A8CC2786BCDCEE64BD0151CEB75FC84C779738DFA07630732D5B29F1CD4F60CE
+              380A87D273ACAD998381993D3BC5FEF87514B7296D1CDD8B79DE686D2B04ACF6
+              793FD08DA5B89FCB49E482CB24821888DDFE70E07622DC765AB9E27C774052AF
+              6DD7ED81A7E2EFCBAC89586BAF93C483DD92862B3947BED4D53BB6E16E49DC8F
+              B80840B8027CD85EB0B7617BA02BAC1F0FCC32ACD4D6D5B749F4CA9BF193A392
+              79AF47321FBDAA4F82C436DE2BF1BB1E176331325B0D9C160105E0FF6C0F7485
+              65D58D2761185C6456C1A2D8CCBB2F217BBD85054E28627927C13EA9064EAF80
+              00A477768BBDEF1D9C04ED503889FB247ECF933835FEDDAA32A1B4D36140B7E1
+              CEEB38C149D8036F48E6EDE745A54F790F04A02102E8F3741BEE7CDE09EC8137
+              B588A03444401EBA4DECD62DFE0A7E71EC2B14BE60DEDB9018980DDD863B4FE3
+              176DEB11F3DCCA6D7AD3047139B8F3062AF55C344D1097A39AF195681A01F3E5
+              BF29C0710A2ED63454B2A954003B30777878F8603389A02DB06910D3FC3FFA0A
+              94FE66CDAC645A9635D4D1D17169229168B76D5B1A3D4646460EF5F6F66E1F1C
+              1C1C857D36464144691AE59AA9B4056329069B13AE1B095D813DC6EF18FC3338
+              D7150510DEE3C9D0705ECB3D7326A1B1ECBF6938AF452E54CDB8461B4F8A0C5E
+              A0B910F90BA3CB9410236B6E590000000049454E44AE426082}
+            FileName = 
+              'C:\Users\TI\Desktop\Workspace\Projetos\Delphi\DeliveryControl\im' +
+              'ages\search\res\mipmap-mdpi\search.png'
+          end>
+        Align = Right
+        Cursor = crHandPoint
+        Margins.Left = 8.000000000000000000
+        Margins.Top = 8.000000000000000000
+        Margins.Right = 8.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Position.X = 311.000000000000000000
+        Position.Y = 36.000000000000000000
+        Size.Width = 41.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        OnMouseUp = imageSearchMouseUp
+      end
+      object dateEditInicial: TDateEdit
+        Date = 44277.000000000000000000
+        Margins.Left = 5.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 64.000000000000000000
+        Size.Width = 113.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+      end
+      object labelInicial: TLabel
+        StyledSettings = [Family, Size, Style]
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 45.000000000000000000
+        Size.Width = 113.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.FontColor = xFFF15A23
+        Text = 'Data inicial:'
+        TabOrder = 2
+      end
+      object dateEditFinal: TDateEdit
+        Date = 44277.000000000000000000
+        Margins.Left = 5.000000000000000000
+        Position.X = 136.000000000000000000
+        Position.Y = 64.000000000000000000
+        Size.Width = 113.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+      end
+      object Label1: TLabel
+        StyledSettings = [Family, Size, Style]
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 15.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Position.X = 136.000000000000000000
+        Position.Y = 40.000000000000000000
+        Size.Width = 105.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.FontColor = xFFF15A23
+        Text = 'Data final:'
+        TabOrder = 1
+      end
+      object labelDescricao: TLabel
+        Align = Top
+        StyledSettings = [Family]
+        Margins.Left = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Size.Width = 350.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000100000004000000}
+        TextSettings.FontColor = xFFF15A23
+        TextSettings.HorzAlign = Center
+        Text = 'Descri'#231#227'o'
+        TabOrder = 0
+      end
+    end
+    object stringGridExtrato: TStringGrid
+      Align = Client
+      CanFocus = True
+      ClipChildren = True
+      Cursor = crHandPoint
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 350.000000000000000000
+      Size.Height = 379.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'gridstyle'
+      TextSettings.HorzAlign = Trailing
+      StyledSettings = [Family, Style]
+      TabOrder = 1
+      RowCount = 0
+      Options = [ColLines, RowLines, RowSelect, Tabs, Header, AutoDisplacement]
+      Viewport.Width = 346.000000000000000000
+      Viewport.Height = 354.000000000000000000
+      object stringColumnCliente: TStringColumn
+        Header = 'Cliente'
+        Size.Width = 73.000000000000000000
+      end
+      object dateColumnData: TDateColumn
+        Header = 'Data'
+        Format = 'dd/mm/yyyy'
+        Size.Width = 79.000000000000000000
+      end
+      object stringColumnTipo: TStringColumn
+        Header = 'Tipo'
+        Size.Width = 71.000000000000000000
+      end
+      object integerColumnQtde: TIntegerColumn
+        Header = 'Qtde.'
+        Size.Width = 63.000000000000000000
+      end
+      object integerColumnCodCliente: TIntegerColumn
+        Visible = False
+      end
+    end
+    object layoutFooter: TLayout
+      Align = Bottom
+      Padding.Left = 20.000000000000000000
+      Padding.Top = 15.000000000000000000
+      Padding.Right = 20.000000000000000000
+      Padding.Bottom = 15.000000000000000000
+      Position.Y = 526.000000000000000000
+      Size.Width = 360.000000000000000000
+      Size.Height = 75.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object CornerButton1: TCornerButton
+        Action = actionDetalhar
+        Align = Center
+        Enabled = True
+        ImageIndex = -1
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 111.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+      end
+    end
+    object layoutTitle: TLayout
+      Align = Top
+      Size.Width = 360.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      object rectangleTitle: TRectangle
+        Align = Client
+        Fill.Color = xFFF15A23
+        Sides = []
+        Size.Width = 360.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFF03A9F4
+        object imageExit: TImage
+          MultiResBitmap.Height = 48
+          MultiResBitmap.Width = 48
+          MultiResBitmap = <
+            item
+              Width = 48
+              Height = 48
+              PNG = {
+                89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+                87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                028A494441546843ED96CFAB125114C79DB14CD2F75088DA8482885684C133B0
+                452BFB13AA8D7F86E0C295B81011576E5A066DDA1904BD28789B37062D050505
+                7FE05653C2FC359AA29D7367109D9E31AF9979DCA9FB8103DE7B0E73BEE7DE73
+                EFD5C26030180C06E31F85EBF57A8FFAFD7E187F4B53E681ABD7EBE1F97CFE4D
+                14C5EF9D4EE709CE492EFA21E2178B456F238345088210429F14422F5CABD542
+                F15D593BA1DD6E9F4522913BE897C2E80457FEF1EECA238D46E33C1008DC03FF
+                4D8C21911442C463CFCBBA0920BEE4F57AEF83DF89312492422E5CF966B32998
+                49FC5ECF83F873BFDFFF00FCE65B796C9B1DF13C89A490433DFFC5E3F19843FC
+                452BBF239EEAB6F9ED9E47F13E9FEF21F88FC1AC18A7D154739960AE52A98483
+                C1E0A9CD66BB2DCF59AAD5EADAE5729D3A1C8EA1DD6EFF69B55A37B2EBAFE079
+                7E339D4EBFBADDEE37305C4BB3DAE16AB5DA89B2E78D623018BC859C37A4D47F
+                46ED41E3CBE5F2D16AB552F551AD401E6C4355DAD4B6107EEC389D4E3F8BC7E3
+                AF9D4E27F63A015B68B95C9E41D2390CB17D2ED5C34A388E5B4F269352341A7D
+                0543FCA66E5C03BB954AA55E8C46A3A1BCDB846EB72B8442213CC45E308F46BB
+                0BE606C37CBA438A809D78391E8FF78A8083F739168B61E2EB729C1633F40DC1
+                04A408D8EA1FB27E025CAF9F1289C411F835B5D155B05BC4DE4E40111F0B85C2
+                F68CD0CCB608653BCD66B30FB95C0E77827A0EEE041601071EFF5650CFC13361
+                D622943BF1DE744528DF095114DFE5F37987144637A4087CECE0606FDB09DE88
+                61B1583C011FF5D72BB25704B4D4289BCD3E8739BC5A752FC0A815C1225C994C
+                E629FC3DE692C96409C643B0153AF5C4C82DC522EC60984304D35DFC5580E28D
+                5C240683C160FCD7582CBF00A49D871225296CE60000000049454E44AE426082}
+              FileName = 
+                'C:\Users\TI\Desktop\Workspace\Projetos\Delphi\DeliveryControl\im' +
+                'ages\arrow_exit\res\mipmap-mdpi\ic_launcher.png'
+            end>
+          Align = Left
+          Cursor = crHandPoint
+          Size.Width = 33.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          OnMouseUp = imageExitMouseUp
+        end
+      end
+      object labelTitle: TLabel
+        Align = Contents
+        StyledSettings = [Family]
+        Locked = True
+        Size.Width = 360.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000100000004000000}
+        TextSettings.FontColor = claWhite
+        TextSettings.HorzAlign = Center
+        Text = 'Delivery Control'
+        TabOrder = 1
+      end
+    end
+  end
+  object actionListExtratos: TActionList
+    Left = 280
+    Top = 8
+    object actionProcessar: TAction
+      Category = 'Extratos'
+      Text = 'actionProcessar'
+      OnExecute = actionProcessarExecute
+    end
+    object actionDetalhar: TAction
+      Category = 'Extratos'
+      Text = 'Detalhar'
+      OnExecute = actionDetalharExecute
+    end
+  end
+end

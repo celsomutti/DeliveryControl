@@ -1,0 +1,107 @@
+inherited view_Extratos_LgXhdpiPh: Tview_Extratos_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 0
+  inherited layoutPadrao: TLayout
+    Size.Width = 450.000000000000000000
+    Size.Height = 695.000000000000000000
+    inherited layoutFiltro: TLayout
+      Margins.Top = 10.000000000000000000
+      Position.Y = 43.000000000000000000
+      Size.Width = 450.000000000000000000
+      inherited comboBoxAno: TComboBox
+        Size.Height = 32.000000000000000000
+      end
+      inherited comboBoxDia: TComboBox
+        Size.Height = 32.000000000000000000
+      end
+      inherited comboBoxMes: TComboBox
+        Size.Height = 32.000000000000000000
+      end
+      inherited comboBoxTipo: TComboBox
+        Size.Height = 32.000000000000000000
+      end
+      inherited imageSearch: TImage
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        Position.X = 401.000000000000000000
+      end
+      inherited labelDEscricao: TLabel
+        Size.Width = 440.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000100000004000000}
+      end
+      inherited labelTitulo: TLabel
+        Size.Width = 440.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000100000004000000}
+      end
+    end
+    inherited layoutFooter: TLayout
+      Position.Y = 646.000000000000000000
+      Size.Width = 450.000000000000000000
+    end
+    inherited layoutTitle: TLayout
+      Size.Width = 450.000000000000000000
+      inherited rectangleTitle: TRectangle
+        Size.Width = 450.000000000000000000
+        inherited imageExit: TImage
+          MultiResBitmap.Height = 48
+          MultiResBitmap.Width = 48
+          MultiResBitmap = <
+            item
+              Width = 48
+              Height = 48
+              PNG = {
+                89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+                87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                028A494441546843ED96CFAB125114C79DB14CD2F74C88DA8482885684C133B0
+                452BFB13AA8D7F86E0C295B81011576E5A066DDA1904BD28789B37062D051105
+                7FE05653C2FC352AA29D7367109D9E31AF9979DCA9FB8103DE7B0E73BEE7DE73
+                EFD5C26030180C06E31F85EBF57A8FFBFD7E187F4B53E681ABD7EBE1F97CFE5D
+                14C51F9D4EE729CE492EFA21E2178B456F238345088210429F14422F5CABD542
+                F15D593BA1DD6E9F452291BBE897C2E80457FEC9EECA238D46E33C1008DC07FF
+                4D8C21911442C463CFCBBA0920BEE4F57A1F80DF89312492422E5CF966B32998
+                49FC5ECF83F873BFDFFF10FCE65B796C9B1DF13C89A490433DFFD5E3F19843FC
+                452BBF239EEAB6F9ED9E47F13E9FEF11F88FC1AC18A7D154739960AE52A98483
+                C1E0A9CD66BB23CF59AAD5EADAE5729D3A1C8EA1DD6E5F5AADD68DECFA2B789E
+                DF4CA7D36F6EB7FB2D0CD7D2AC76B85AAD76A2EC79A3180C06EF20E70D29F59F
+                517BD0F872B97CB45AAD547D542B9007DB509536B52D841F3B4EA7D3CFE3F1F8
+                1BA7D389BD4EC0165A2E976790740E436C9F4BF5B0128EE3D693C9A4148D465F
+                C310BFA91BD7C06EA752A997A3D16828EF36A1DBED0AA150080FB117CCA3D1EE
+                81B9C1309FEE902260275E8DC7E3BD22E0E07D89C56298F8BA1CA7C50C7D4330
+                012902B6FAA7AC9F00D7EBE7442271047E4D6D7415EC16B1B71350C4A742A1B0
+                3D2334B32D42D94EB3D9EC632E97C39DA09E833B8145C081C7BF15D473F04C98
+                B508E54E7C305D11CA774214C5F7F97CDE2185D10D29021F3B38D8DB76823762
+                582C164FC047FDF58AEC15012D35CA66B32F600EAF56DD0B306A45B0885B994C
+                E619FC3DE692C96409C643B0153AF5C4C82DC522EC60984304D35DFC5580E28D
+                5C240683C160FCD7582CBF00A4B587127AB3133D0000000049454E44AE426082}
+              FileName = 
+                'C:\Users\TI\Desktop\Workspace\Projetos\Delphi\DeliveryControl\im' +
+                'ages\arrow_exit\res\mipmap-mdpi\ic_launcher.png'
+            end>
+        end
+      end
+      inherited labelTitle: TLabel
+        Size.Width = 450.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000100000004000000}
+      end
+    end
+    inherited StringGridExtrato: TStringGrid
+      Size.Width = 440.000000000000000000
+      Size.Height = 449.000000000000000000
+      Viewport.Width = 440.000000000000000000
+      Viewport.Height = 449.000000000000000000
+      inherited integerColumnQtde: TIntegerColumn
+        Size.Width = 41.000000000000000000
+      end
+      inherited stringColumnDescricao: TStringColumn
+        Size.Width = 167.000000000000000000
+      end
+      inherited currencyColumnUnitario: TCurrencyColumn
+        Size.Width = 47.000000000000000000
+      end
+      inherited currencyColumnValor: TCurrencyColumn
+        Size.Width = 71.000000000000000000
+      end
+    end
+  end
+end

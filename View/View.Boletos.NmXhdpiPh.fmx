@@ -1,0 +1,91 @@
+inherited view_Boletos_NmXhdpiPh: Tview_Boletos_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  DesignerMasterStyle = 0
+  inherited layoutPadrao: TLayout
+    Size.Width = 400.000000000000000000
+    Size.Height = 615.000000000000000000
+    inherited layoutTitle: TLayout
+      Size.Width = 400.000000000000000000
+      inherited rectangleTitle: TRectangle
+        Size.Width = 400.000000000000000000
+        inherited imageExit: TImage
+          MultiResBitmap.Height = 48
+          MultiResBitmap.Width = 48
+          MultiResBitmap = <
+            item
+              Width = 48
+              Height = 48
+              PNG = {
+                89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+                87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                0286494441546843ED96BD8B1A4114C09D35F1247A4784906B82828826211838
+                03A6B8CAFB132E69FC33040B2BB110112B9B948134E90C04724702D7DC1AB852
+                B050F0035B8D128CDF06D1BC37BB886ECEB097DD3D6693F9C10367DE63DFE7CC
+                68E170381C0E87F38F423A9DCEF36EB71BC2DFD2967920D56A35349BCDBE4DA7
+                D3EFAD56EB25EE492AF6A1C1CFE7F3CE4A0693104531883AC9845D48A3D1C0E0
+                DB72EC9466B379110E870F512F99B10956FEC566E5915AAD76E9F7FB1F83FE1E
+                DA504B06A1C1E3CCCB715320F8A2C7E379027A27DA504B06B9B6F2F57A5D3453
+                F05B330FC15FFA7CBEA7A0375FE5716C368217A82583EC9AF9AF6EB7DB1CC15F
+                57F98DE0991E9BDFEE790CDEEBF53E03FD018815ED348A6A6E624CCAE5722810
+                089CD96CB687F29E055ED965AFD73B73381C7DBBDDFED36AB5AE64D55F2108C2
+                6A3C1E5FB95CAE77B05C4ABBDA21954AE54839F3460105790F3EF724D77F46ED
+                41134AA5D2FE62B150F551AD801F1C4355B1A91D21FCD8412A953A89C5626F9D
+                4E27CE3A054708CEC505389DC112C7E74633AC8410B21C8D46C54824F20696F8
+                4DDDB803F220994CBE1A0C067DB9DB9476BB2D0683413CC41E10B7467904E202
+                417FBA4393804EBC1E0E875B49C0C1FB128D46D1F15DD94E8B18FA86A0039A04
+                B4FA871C3F05AED7CFF1787C1FF49AC6E836D84C62AB1390C4793E9F5F9F1196
+                5927A11CA7C964F2299BCD622798676727300938F0F8B78279769E09B326A1EC
+                C447D325A17C27E0B1FB90CBE51C9219DBD024F0B18383BD1E277823FA8542E1
+                0874CC5FAFC856123052834C26730A7B78B5EA9E805115C124EEA7D3E963F87B
+                4C12894411D67D90052AF5C4C89662127610F43105D13DF8DB008337B2481C0E
+                87C3F9AFB1587E01A7638A1289432B270000000049454E44AE426082}
+              FileName = 
+                'C:\Users\TI\Desktop\Workspace\Projetos\Delphi\DeliveryControl\im' +
+                'ages\arrow_return\res\mipmap-mdpi\ic_launcher.png'
+            end>
+        end
+        inherited labelTitle: TLabel
+          Size.Width = 400.000000000000000000
+          TextSettings.Font.StyleExt = {00060000000100000004000000}
+        end
+      end
+    end
+    inherited layoutFiltro: TLayout
+      Size.Width = 400.000000000000000000
+      inherited buttonProcurar: TButton
+        Position.X = 152.000000000000000000
+        TextSettings.FontColor = claWhite
+      end
+      inherited labelValor: TLabel
+        Position.X = 240.000000000000000000
+      end
+      inherited labelValorValor: TLabel
+        Position.X = 240.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+    inherited stringGridBoletos: TStringGrid
+      Size.Width = 360.000000000000000000
+      Size.Height = 296.000000000000000000
+      Viewport.Width = 360.000000000000000000
+      Viewport.Height = 296.000000000000000000
+      inherited columnLinha: TColumn
+        Size.Width = 161.000000000000000000
+      end
+      inherited Column1: TColumn
+        Size.Width = 87.000000000000000000
+      end
+      inherited Column2: TColumn
+        Size.Width = 79.000000000000000000
+      end
+    end
+    inherited layoutRodape: TLayout
+      Position.Y = 521.000000000000000000
+      Size.Width = 400.000000000000000000
+      inherited labelValorSaldo: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+  end
+end
