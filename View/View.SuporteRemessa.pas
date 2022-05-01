@@ -43,6 +43,7 @@ type
     Label1: TLabel;
     Image2: TImage;
     TabStyleTextObject1: TTabStyleTextObject;
+    Button1: TButton;
     procedure imageExitMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
     procedure actionProcessarExecute(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
