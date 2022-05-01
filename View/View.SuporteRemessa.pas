@@ -9,7 +9,8 @@ uses
   Data.DB, System.Rtti, FMX.Grid.Style, FMX.ScrollBox,
   FMX.Grid, Fmx.Bind.Grid, System.Bindings.Outputs, Fmx.Bind.Editors,
   Data.Bind.EngExt, Fmx.Bind.DBEngExt, Data.Bind.Components, Data.Bind.Grid,
-  Data.Bind.DBScope, FMX.DateTimeCtrls, Controller.RESTSuportTracking, FMX.Memo, FMX.TabControl, FMX.CodeReader;
+  Data.Bind.DBScope, FMX.DateTimeCtrls, Controller.RESTSuportTracking, FMX.Memo, FMX.TabControl, FMX.CodeReader,
+  FMX.Styles.Objects;
 
 type
   Tview_SuporteRemessa = class(TForm)
@@ -36,12 +37,12 @@ type
     editTelefone2: TEdit;
     editTelefone3: TEdit;
     editEndereco: TMemo;
-    editComplemento: TMemo;
     TabItem2: TTabItem;
     codeReader: TCodeReader;
     rectangleIniciar: TRectangle;
     Label1: TLabel;
     Image2: TImage;
+    TabStyleTextObject1: TTabStyleTextObject;
     procedure imageExitMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
     procedure actionProcessarExecute(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -150,7 +151,7 @@ begin
                            DM_Main.memTableTrackingnom_bairro.AsString + #13 +
                            DM_Main.memTableTrackingnom_cidade_uf.AsString + #13 +
                            'CEP: ' + DM_Main.memTableTrackingnum_cep.AsString;
-      editComplemento.Lines.Text := DM_Main.memTableTrackingdes_complemento.Text;
+     TabStyleTextObject1.Text := DM_Main.memTableTrackingdes_complemento.Text;
     end
     else
     begin
@@ -191,7 +192,7 @@ begin
   editTelefone2.Text := '';
   editTelefone3.Text := '';
   editEndereco.Lines.Clear;
-  editComplemento.Lines.Clear;
+  TabStyleTextObject1.Text := '';
   editParametro.SetFocus;
 end;
 

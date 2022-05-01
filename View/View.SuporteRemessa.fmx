@@ -78,27 +78,27 @@ object view_SuporteRemessa: Tview_SuporteRemessa
               PNG = {
                 89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
                 87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
-                028A494441546843ED96CFAB125114C79DB17C92BE47C2A3168682885684C133
-                B0452BFB13AA8D7F86E0C295B81011576E5A066DDA1904BD28789B3706B9135C
-                28F803B79A12E6AFD110ED9C3B83E8F48C79CDCCE34EEF7EE080F79EC39C73EE
-                FDDE7BB530180C0683C1F84FE17ABDDEE37EBF1FC6DFD29479E0EAF57A783E9F
-                7F1745F147A7D3798A73928B7E48F18BC5A2B796C126044108A14F0AA117AED5
-                6A61F15DB97642BBDD3E8B442277D12F85D109AEFC93ED95471A8DC6792010B8
-                0FFE5B1843222984148F9A97EB2640F125AFD7FB00FC4E8C21911472E1CA379B
-                4DC14CC5EF681E8A3FF7FBFD0FC16FBE9547D96C15CF93480AD9A7F9AF1E8FC7
-                1CC55FB4F25BC5532D9B3FEE792CDEE7F33D02FF119815E3349A6A2E13CC55AB
-                D57030183CB5D96C77E4394BB95C5EB9DDEE5387C331B4DBEDBFAC56EB5A76FD
-                133CCFAFA7D3E93797CBF516862B69563B5CAD563B516ADE280683C13BC87920
-                A5FE3B6A0F1A5FA9540E97CBA5AA8F6A05F2A00C55D5A65642F8B1A3743AFD3C
-                1E8FBF713A9DA875024A0824750649E73044F95C4AC34A388E5B4D269352341A
-                7D0D43FCA66EDC003B4EA5522F47A3D150DE6D42B7DB1542A1101E622F9847A3
-                DD037381613EDD214DC04EBC1A8FC73B4DC0C1FB128BC530F14D394E8B19FA86
-                6002D2046CF54FB97E025CAF9F1389C421F835C9E82AD86E626727A0894F8542
-                6173466866D384524EB3D9EC632E97C39DA09EBD3B814DC081C7BF15D4B3F74C
-                98B509E54E7C305D13CA774214C5F7F97CDE2185D10D69021F3B38D81B39C11B
-                312C168B27E0A3FE7A45769A00498DB2D9EC0B98C3AB55F7068C5A116CE27626
-                9379067F8FB964325982F1106C894E3D31724BB1093B18E610C1742FFE2AC0E2
-                8D5C240683C1605C6B2C96DF6D98841222EBDC340000000049454E44AE426082}
+                028A494441546843ED96CFAB125114C79DB154D2F74878D4461444B4220C9E81
+                6FD1CAFE846AE39F21B870252E44C4959B96419B7606412F0ADEE68D814BC185
+                823F70AB2961FE1A0DD1CEB933884ECF98D7CC3CEED4FDC001EF3D8739DF73EF
+                B9F76A6130180C0683F18FC2F5FBFD2783C12082BFA529F3C0351A8DC862B1F8
+                268AE2F76EB77B8673928B7E88F8E572D9DFC86011822084D12785D00BD76EB7
+                517C4FD64EE8743A17D168F43EFAA5303AC1957FBABBF248B3D9BC0C06830FC0
+                7F076348248510F1D8F3B26E02882FFB7CBE87E077610C89A4902B57BED56A09
+                6612BFD7F320FE3210083C02BFF9561EDB66473C4F2229E450CF7FF57ABDE610
+                7FD5CAEF88A7BA6D7EBBE751BCDFEF7F0CFE63302BC66934D55C2798ABD56A91
+                5028746EB3D9EEC973964AA5B2F6783CE74EA773E470387E5AADD68DECFA2B78
+                9EDFCC66B38ADBED7E0BC3B534AB1DAE5EAF9F2A7BDE2886C3E13BC8699752FF
+                19B5078DAF56AB47ABD54AD547B50279B00D556953DB42F8B1E34C26F33C9148
+                BC71B95CD8EB046C21BBDD7E01491730C4F6B9560F2BE1386E3D9D4ECBB158EC
+                350CF19BBA710BEC249D4EBF1C8FC72379B709BD5E4F0887C378887D605E8DE6
+                017383613EDD2145C04EBC9A4C267B45C0C1FB128FC731F16D394E8B19FA8660
+                0252046CF50F593F01AED7CFC964F208FC9ADAE826D82D626F27A0884FC56271
+                7B4668665B84B29DE6F3F9C77C3E8F3B413D0777028B80038F7F2BA8E7E09930
+                6B11CA9DF860BA2294EF84288AEF0B8582530AA31B52043E7670B0B7ED046FC4
+                A8542A9D828FFAEB15D92B025A6A9CCBE55EC01C5EADBA1760D48A601177B3D9
+                EC33F87BCCA552A9328C47602B74EA89915B8A4538C0308708A6BBF89B00C51B
+                B9480C0683C1F8AFB1587E016D80841288E351E60000000049454E44AE426082}
               FileName = 
                 'C:\Users\TI\Desktop\Workspace\Projetos\Delphi\DeliveryControl\im' +
                 'ages\arrow_exit\res\mipmap-mdpi\ic_launcher.png'
@@ -174,7 +174,7 @@ object view_SuporteRemessa: Tview_SuporteRemessa
           object editTelefone1: TEdit
             Touch.InteractiveGestures = [LongTap, DoubleTap]
             Anchors = [akLeft, akTop, akRight]
-            TabOrder = 7
+            TabOrder = 6
             ReadOnly = True
             TextSettings.Font.Size = 16.000000000000000000
             Position.X = 16.000000000000000000
@@ -188,7 +188,7 @@ object view_SuporteRemessa: Tview_SuporteRemessa
           object editTelefone2: TEdit
             Touch.InteractiveGestures = [LongTap, DoubleTap]
             Anchors = [akLeft, akTop, akRight]
-            TabOrder = 6
+            TabOrder = 5
             ReadOnly = True
             TextSettings.Font.Size = 16.000000000000000000
             Position.X = 16.000000000000000000
@@ -201,7 +201,7 @@ object view_SuporteRemessa: Tview_SuporteRemessa
           object editTelefone3: TEdit
             Touch.InteractiveGestures = [LongTap, DoubleTap]
             Anchors = [akLeft, akTop, akRight]
-            TabOrder = 5
+            TabOrder = 4
             ReadOnly = True
             TextSettings.Font.Size = 16.000000000000000000
             Position.X = 16.000000000000000000
@@ -225,26 +225,9 @@ object view_SuporteRemessa: Tview_SuporteRemessa
             Size.Height = 113.000000000000000000
             Size.PlatformDefault = False
             StyleLookup = 'memostyle'
-            TabOrder = 4
-            Viewport.Width = 229.000000000000000000
-            Viewport.Height = 109.000000000000000000
-          end
-          object editComplemento: TMemo
-            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
-            DataDetectorTypes = []
-            ReadOnly = True
-            StyledSettings = [Family, Style, FontColor]
-            TextSettings.Font.Size = 10.000000000000000000
-            Anchors = [akLeft, akTop, akRight]
-            Position.X = 16.000000000000000000
-            Position.Y = 264.000000000000000000
-            Size.Width = 233.000000000000000000
-            Size.Height = 105.000000000000000000
-            Size.PlatformDefault = False
-            StyleLookup = 'memostyle'
             TabOrder = 3
             Viewport.Width = 229.000000000000000000
-            Viewport.Height = 101.000000000000000000
+            Viewport.Height = 109.000000000000000000
           end
           object Image2: TImage
             MultiResBitmap.Width = 48
@@ -307,6 +290,17 @@ object view_SuporteRemessa: Tview_SuporteRemessa
             Size.PlatformDefault = False
             OnMouseUp = Image2MouseUp
           end
+          object TabStyleTextObject1: TTabStyleTextObject
+            Position.X = 16.000000000000000000
+            Position.Y = 264.000000000000000000
+            Size.Width = 233.000000000000000000
+            Size.Height = 105.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Trimming = Word
+            ShadowVisible = False
+            ActiveTrigger = MouseOver
+            ActiveColor = claNull
+          end
         end
         object TabItem2: TTabItem
           CustomIcon = <
@@ -334,9 +328,10 @@ object view_SuporteRemessa: Tview_SuporteRemessa
             OnStart = codeReaderStart
             OnStop = codeReaderStop
             Size.Width = 352.000000000000000000
-            Size.Height = 530.000000000000000000
+            Size.Height = 329.000000000000000000
             Size.PlatformDefault = False
             Position.X = 8.000000000000000000
+            Position.Y = 8.000000000000000000
             Anchors = [akLeft, akTop, akRight, akBottom]
           end
           object rectangleIniciar: TRectangle
@@ -344,9 +339,9 @@ object view_SuporteRemessa: Tview_SuporteRemessa
             Cursor = crHandPoint
             Fill.Color = xFFF15A23
             Margins.Top = 20.000000000000000000
-            Position.X = 144.000000000000000000
-            Position.Y = 428.000000000000000000
-            Size.Width = 365.000000000000000000
+            Position.X = 96.000000000000000000
+            Position.Y = 340.000000000000000000
+            Size.Width = 157.000000000000000000
             Size.Height = 45.000000000000000000
             Size.PlatformDefault = False
             Stroke.Color = xFFF15A23
@@ -358,7 +353,7 @@ object view_SuporteRemessa: Tview_SuporteRemessa
               Align = Client
               StyledSettings = [Family]
               Locked = True
-              Size.Width = 365.000000000000000000
+              Size.Width = 157.000000000000000000
               Size.Height = 45.000000000000000000
               Size.PlatformDefault = False
               TextSettings.Font.Size = 16.000000000000000000
