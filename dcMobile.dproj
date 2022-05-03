@@ -265,15 +265,16 @@
         <Android_SplashImage960>images\splash_logo_960_720.png</Android_SplashImage960>
         <Android_SplashTileMode>disabled</Android_SplashTileMode>
         <PF_KeyStore>keystore\dcMobile.keystore</PF_KeyStore>
-        <PF_KeyStorePass>852E47C55FC70789CF51E527D171E33F81850535A05F97C997AA0FF88E783C8ADB56A385E3111C2FC1E2577DFAC4C363BA95367E043722D3163A459DE5E4229DC938F341D558FA9BBFF8AF1172298594F7D8331F</PF_KeyStorePass>
+        <PF_KeyStorePass>852E47C55FC70789CF51E527A458E36281C30502A02B979B97EE0FB48E3E3C9EDB56A384E34A1C6BC1AE577CFA9CC360BAE1367E044B22801678459DE5E522CEC91BF36FD558FAD0BFAFAF1107028594F7D8331F</PF_KeyStorePass>
         <PF_AliasKey>dcmobile</PF_AliasKey>
-        <PF_AliasKeyPass>852E47C55FC70789CF51E527A4587BACE4450519A05A97D897C80FA28E363C94DB04A390E34B1C31C1B15774FAD1C339BABA3609043F22FC1657458CE5A722CFC949F31FD555FAFEBFE4AF0D07551D589201331F</PF_AliasKeyPass>
+        <PF_AliasKeyPass>852E47C55FC70789CF51E527A4587BAC819E0544A01C97EF97BC0FF08E723CD8DB42A384E34B1C30C1EA5730FA9DC338BAE2360A044B22FC162B45DFE5E522CFC948F34CD576FAD0BFE4AF4607021D58F7D8331F</PF_AliasKeyPass>
         <BT_BuildType>AppStore</BT_BuildType>
         <EL_SecureFileSharing>true</EL_SecureFileSharing>
         <AUP_ACCESS_COARSE_LOCATION>false</AUP_ACCESS_COARSE_LOCATION>
         <AUP_ACCESS_FINE_LOCATION>false</AUP_ACCESS_FINE_LOCATION>
         <AUP_CALL_PHONE>false</AUP_CALL_PHONE>
         <AUP_READ_PHONE_STATE>false</AUP_READ_PHONE_STATE>
+        <BRCC_IncludePath>C:\Users\TI\Desktop\Workspace\Projetos\Delphi\DeliveryControl\Lib\Classes\1D Barcodes;C:\Users\TI\Desktop\Workspace\Projetos\Delphi\DeliveryControl\Lib\Classes\2D Barcodes;C:\Users\TI\Desktop\Workspace\Projetos\Delphi\DeliveryControl\Lib\Classes\Common;C:\Users\TI\Desktop\Workspace\Projetos\Delphi\DeliveryControl\Lib\Classes\Filtering;C:\Users\TI\Desktop\Workspace\Projetos\Delphi\DeliveryControl\Lib\Classes\2D Barcodes\Decoder;C:\Users\TI\Desktop\Workspace\Projetos\Delphi\DeliveryControl\Lib\Classes\2D Barcodes\Detector;C:\Users\TI\Desktop\Workspace\Projetos\Delphi\DeliveryControl\Lib\Classes\Common\Detector;C:\Users\TI\Desktop\Workspace\Projetos\Delphi\DeliveryControl\Lib\Classes\Common\ReedSolomon;$(BRCC_IncludePath)</BRCC_IncludePath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
@@ -357,105 +358,84 @@
             <Form>view_SuporteRemessa</Form>
             <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\FMX.CodeReader.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.DW.Camera.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.DW.Android.Helpers.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.DW.Androidapi.JNI.App.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.DW.Androidapi.JNI.DWCameraHelpers.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.DW.Androidapi.JNI.Hardware.Camera2.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.DW.Androidapi.JNI.SupportV4.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.DW.Androidapi.JNI.View.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.DW.Camera.Android.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.DW.CameraPreview.Android.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.DW.CameraPreview.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.DW.Consts.Android.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.DW.Consts.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.DW.Messaging.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.DW.NativeImage.Android.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.DW.NativeImage.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.DW.Permissions.Helpers.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.DW.Types.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.DW.UIHelper.Android.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.DW.UIHelper.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.BarcodeFormat.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.BaseLuminanceSource.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.Binarizer.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.BinaryBitmap.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.BitSource.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXIng.ByteSegments.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.CharacterSetECI.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.Common.BitArray.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.Common.BitArrayImplementation.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.Common.BitMatrix.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.Common.Detector.MathUtils.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.Common.Detector.WhiteRectangleDetector.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.Common.DetectorResult.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.Common.GridSampler.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.Common.PerspectiveTransform.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.Common.ReedSolomon.GenericGF.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.Common.ReedSolomon.ReedSolomonDecoder.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.Datamatrix.DataMatrixReader.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.Datamatrix.Internal.BitMatrixParser.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.Datamatrix.Internal.DataBlock.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.Datamatrix.Internal.DecodedBitStreamParser.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.Datamatrix.Internal.Decoder.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.Datamatrix.Internal.Detector.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.Datamatrix.Internal.Version.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.DecodeHintType.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.DecoderResult.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.DefaultGridSampler.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.EncodeHintType.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.GlobalHistogramBinarizer.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.Helpers.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.HybridBinarizer.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.InvertedLuminanceSource.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.LuminanceSource.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.MultiFormatReader.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.OneD.Code39Reader.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.OneD.Code93Reader.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.OneD.Code128Reader.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.OneD.EAN8Reader.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.OneD.EAN13Reader.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.OneD.EANManufacturerOrgSupport.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.OneD.ITFReader.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.OneD.OneDReader.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.OneD.UPCAReader.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.OneD.UPCEANExtension2Support.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.OneD.UPCEANExtension5Support.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.OneD.UPCEANExtensionSupport.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.OneD.UPCEANReader.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.OneD.UPCEReader.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.PlanarYUVLuminanceSource.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.QrCode.Internal.AlignmentPattern.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.QrCode.Internal.AlignmentPatternFinder.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.QrCode.Internal.AlignmentPatternImplementation.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.QrCode.Internal.BitMatrixParser.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.QrCode.Internal.DataBlock.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.QrCode.Internal.DataMask.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.QrCode.Internal.DecodedBitStreamParser.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.QrCode.Internal.Decoder.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.QrCode.Internal.Detector.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.QrCode.Internal.ErrorCorrectionLevel.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.QrCode.Internal.FinderPattern.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.QrCode.Internal.FinderPatternFinder.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.QrCode.Internal.FinderPatternImplementation.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.QrCode.Internal.FinderPatternInfo.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.QrCode.Internal.FormatInformation.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.QrCode.Internal.Mode.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.QrCode.Internal.QRCodeDecoderMetaData.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.QrCode.Internal.Version.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.QrCode.QRCodeReader.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.Reader.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.ReadResult.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.ResultMetadataType.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.ResultPoint.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.ResultPointImplementation.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.RGBLuminanceSource.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.ScanManager.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.ZXing.StringUtils.pas"/>
         <DCCReference Include="Model\Model.RESTBoletos.pas"/>
         <DCCReference Include="Controller\Controller.RESTBoletos.pas"/>
-        <DCCReference Include="C:\Componentes\TCodeReader\src\CodeReader.DW.Androidapi.JNI.Os.pas"/>
+        <DCCReference Include="Lib\Classes\Common\ZXing.ReadResult.pas"/>
+        <DCCReference Include="Lib\Classes\ZXing.ScanManager.pas"/>
+        <DCCReference Include="Lib\Classes\Common\ZXing.BarcodeFormat.pas"/>
+        <DCCReference Include="Lib\Classes\Common\ZXing.BitSource.pas"/>
+        <DCCReference Include="Lib\Classes\Common\ZXIng.ByteSegments.pas"/>
+        <DCCReference Include="Lib\Classes\Common\ZXing.CharacterSetECI.pas"/>
+        <DCCReference Include="Lib\Classes\Common\ZXing.Common.BitArray.pas"/>
+        <DCCReference Include="Lib\Classes\Common\ZXing.Common.BitArrayImplementation.pas"/>
+        <DCCReference Include="Lib\Classes\Common\ZXing.Common.BitMatrix.pas"/>
+        <DCCReference Include="Lib\Classes\Common\ZXing.Common.DetectorResult.pas"/>
+        <DCCReference Include="Lib\Classes\Common\ZXing.Common.GridSampler.pas"/>
+        <DCCReference Include="Lib\Classes\Common\ZXing.Common.PerspectiveTransform.pas"/>
+        <DCCReference Include="Lib\Classes\Common\ZXing.DecodeHintType.pas"/>
+        <DCCReference Include="Lib\Classes\Common\ZXing.DecoderResult.pas"/>
+        <DCCReference Include="Lib\Classes\Common\ZXing.DefaultGridSampler.pas"/>
+        <DCCReference Include="Lib\Classes\Common\ZXing.EncodeHintType.pas"/>
+        <DCCReference Include="Lib\Classes\Common\ZXing.Helpers.pas"/>
+        <DCCReference Include="Lib\Classes\Common\ZXing.MultiFormatReader.pas"/>
+        <DCCReference Include="Lib\Classes\Common\ZXing.Reader.pas"/>
+        <DCCReference Include="Lib\Classes\Common\ZXing.ResultMetadataType.pas"/>
+        <DCCReference Include="Lib\Classes\Common\ZXing.ResultPoint.pas"/>
+        <DCCReference Include="Lib\Classes\Common\ZXing.ResultPointImplementation.pas"/>
+        <DCCReference Include="Lib\Classes\Common\ZXing.StringUtils.pas"/>
+        <DCCReference Include="Lib\Classes\1D Barcodes\ZXing.OneD.Code39Reader.pas"/>
+        <DCCReference Include="Lib\Classes\1D Barcodes\ZXing.OneD.Code93Reader.pas"/>
+        <DCCReference Include="Lib\Classes\1D Barcodes\ZXing.OneD.Code128Reader.pas"/>
+        <DCCReference Include="Lib\Classes\1D Barcodes\ZXing.OneD.EAN8Reader.pas"/>
+        <DCCReference Include="Lib\Classes\1D Barcodes\ZXing.OneD.EAN13Reader.pas"/>
+        <DCCReference Include="Lib\Classes\1D Barcodes\ZXing.OneD.EANManufacturerOrgSupport.pas"/>
+        <DCCReference Include="Lib\Classes\1D Barcodes\ZXing.OneD.ITFReader.pas"/>
+        <DCCReference Include="Lib\Classes\1D Barcodes\ZXing.OneD.OneDReader.pas"/>
+        <DCCReference Include="Lib\Classes\1D Barcodes\ZXing.OneD.UPCAReader.pas"/>
+        <DCCReference Include="Lib\Classes\1D Barcodes\ZXing.OneD.UPCEANExtension2Support.pas"/>
+        <DCCReference Include="Lib\Classes\1D Barcodes\ZXing.OneD.UPCEANExtension5Support.pas"/>
+        <DCCReference Include="Lib\Classes\1D Barcodes\ZXing.OneD.UPCEANExtensionSupport.pas"/>
+        <DCCReference Include="Lib\Classes\1D Barcodes\ZXing.OneD.UPCEANReader.pas"/>
+        <DCCReference Include="Lib\Classes\1D Barcodes\ZXing.OneD.UPCEReader.pas"/>
+        <DCCReference Include="Lib\Classes\2D Barcodes\ZXing.Datamatrix.DataMatrixReader.pas"/>
+        <DCCReference Include="Lib\Classes\2D Barcodes\ZXing.QrCode.QRCodeReader.pas"/>
+        <DCCReference Include="Lib\Classes\2D Barcodes\Decoder\ZXing.Datamatrix.Internal.BitMatrixParser.pas"/>
+        <DCCReference Include="Lib\Classes\2D Barcodes\Decoder\ZXing.Datamatrix.Internal.DataBlock.pas"/>
+        <DCCReference Include="Lib\Classes\2D Barcodes\Decoder\ZXing.Datamatrix.Internal.DecodedBitStreamParser.pas"/>
+        <DCCReference Include="Lib\Classes\2D Barcodes\Decoder\ZXing.Datamatrix.Internal.Decoder.pas"/>
+        <DCCReference Include="Lib\Classes\2D Barcodes\Decoder\ZXing.Datamatrix.Internal.Version.pas"/>
+        <DCCReference Include="Lib\Classes\2D Barcodes\Decoder\ZXing.QrCode.Internal.BitMatrixParser.pas"/>
+        <DCCReference Include="Lib\Classes\2D Barcodes\Decoder\ZXing.QrCode.Internal.DataBlock.pas"/>
+        <DCCReference Include="Lib\Classes\2D Barcodes\Decoder\ZXing.QrCode.Internal.DataMask.pas"/>
+        <DCCReference Include="Lib\Classes\2D Barcodes\Decoder\ZXing.QrCode.Internal.DecodedBitStreamParser.pas"/>
+        <DCCReference Include="Lib\Classes\2D Barcodes\Decoder\ZXing.QrCode.Internal.Decoder.pas"/>
+        <DCCReference Include="Lib\Classes\2D Barcodes\Decoder\ZXing.QrCode.Internal.ErrorCorrectionLevel.pas"/>
+        <DCCReference Include="Lib\Classes\2D Barcodes\Decoder\ZXing.QrCode.Internal.FormatInformation.pas"/>
+        <DCCReference Include="Lib\Classes\2D Barcodes\Decoder\ZXing.QrCode.Internal.Mode.pas"/>
+        <DCCReference Include="Lib\Classes\2D Barcodes\Decoder\ZXing.QrCode.Internal.QRCodeDecoderMetaData.pas"/>
+        <DCCReference Include="Lib\Classes\2D Barcodes\Decoder\ZXing.QrCode.Internal.Version.pas"/>
+        <DCCReference Include="Lib\Classes\2D Barcodes\Detector\ZXing.Datamatrix.Internal.Detector.pas"/>
+        <DCCReference Include="Lib\Classes\2D Barcodes\Detector\ZXing.QrCode.Internal.AlignmentPattern.pas"/>
+        <DCCReference Include="Lib\Classes\2D Barcodes\Detector\ZXing.QrCode.Internal.AlignmentPatternFinder.pas"/>
+        <DCCReference Include="Lib\Classes\2D Barcodes\Detector\ZXing.QrCode.Internal.AlignmentPatternImplementation.pas"/>
+        <DCCReference Include="Lib\Classes\2D Barcodes\Detector\ZXing.QrCode.Internal.Detector.pas"/>
+        <DCCReference Include="Lib\Classes\2D Barcodes\Detector\ZXing.QrCode.Internal.FinderPattern.pas"/>
+        <DCCReference Include="Lib\Classes\2D Barcodes\Detector\ZXing.QrCode.Internal.FinderPatternFinder.pas"/>
+        <DCCReference Include="Lib\Classes\2D Barcodes\Detector\ZXing.QrCode.Internal.FinderPatternImplementation.pas"/>
+        <DCCReference Include="Lib\Classes\2D Barcodes\Detector\ZXing.QrCode.Internal.FinderPatternInfo.pas"/>
+        <DCCReference Include="Lib\Classes\Common\Detector\ZXing.Common.Detector.MathUtils.pas"/>
+        <DCCReference Include="Lib\Classes\Common\Detector\ZXing.Common.Detector.WhiteRectangleDetector.pas"/>
+        <DCCReference Include="Lib\Classes\Common\ReedSolomon\ZXing.Common.ReedSolomon.GenericGF.pas"/>
+        <DCCReference Include="Lib\Classes\Common\ReedSolomon\ZXing.Common.ReedSolomon.ReedSolomonDecoder.pas"/>
+        <DCCReference Include="Lib\Classes\Filtering\ZXing.BaseLuminanceSource.pas"/>
+        <DCCReference Include="Lib\Classes\Filtering\ZXing.Binarizer.pas"/>
+        <DCCReference Include="Lib\Classes\Filtering\ZXing.BinaryBitmap.pas"/>
+        <DCCReference Include="Lib\Classes\Filtering\ZXing.GlobalHistogramBinarizer.pas"/>
+        <DCCReference Include="Lib\Classes\Filtering\ZXing.HybridBinarizer.pas"/>
+        <DCCReference Include="Lib\Classes\Filtering\ZXing.InvertedLuminanceSource.pas"/>
+        <DCCReference Include="Lib\Classes\Filtering\ZXing.LuminanceSource.pas"/>
+        <DCCReference Include="Lib\Classes\Filtering\ZXing.PlanarYUVLuminanceSource.pas"/>
+        <DCCReference Include="Lib\Classes\Filtering\ZXing.RGBLuminanceSource.pas"/>
         <JavaReference Include="C:\Componentes\TCodeReader\lib\dw-camera.jar">
             <ContainerId>ClassesdexFile64</ContainerId>
             <Disabled/>
@@ -488,9 +468,8 @@
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">
-                <DeployFile LocalName="images\logo_144_144.png" Configuration="Release" Class="Android_LauncherIcon144">
-                    <Platform Name="Android64">
-                        <RemoteName>ic_launcher.png</RemoteName>
+                <DeployFile LocalName="Android\Release\AndroidManifest.xml" Configuration="Release" Class="ProjectAndroidManifest">
+                    <Platform Name="Android">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -547,14 +526,14 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_72x72.png" Configuration="Release" Class="Android_NotificationIcon72">
+                <DeployFile LocalName="Android\Release\libdcMobile.so" Configuration="Release" Class="ProjectOutput_Android32">
                     <Platform Name="Android64">
-                        <RemoteName>ic_notification.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="Android\Release\libdcMobile.so" Configuration="Release" Class="ProjectOutput_Android32">
+                <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_72x72.png" Configuration="Release" Class="Android_NotificationIcon72">
                     <Platform Name="Android64">
+                        <RemoteName>ic_notification.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -582,6 +561,17 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
+                <DeployFile LocalName="Android\Debug\splash_image_def.xml" Configuration="Debug" Class="AndroidSplashImageDef">
+                    <Platform Name="Android">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_36x36.png" Configuration="Release" Class="Android_NotificationIcon36">
+                    <Platform Name="Android64">
+                        <RemoteName>ic_notification.png</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="images\logo_48_48.png" Configuration="Debug" Class="Android_LauncherIcon48">
                     <Platform Name="Android">
                         <RemoteName>ic_launcher.png</RemoteName>
@@ -589,17 +579,6 @@
                     </Platform>
                 </DeployFile>
                 <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_24x24.png" Configuration="Debug" Class="Android_NotificationIcon24">
-                    <Platform Name="Android64">
-                        <RemoteName>ic_notification.png</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="Android64\Debug\styles.xml" Configuration="Debug" Class="AndroidSplashStyles">
-                    <Platform Name="Android64">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_36x36.png" Configuration="Release" Class="Android_NotificationIcon36">
                     <Platform Name="Android64">
                         <RemoteName>ic_notification.png</RemoteName>
                         <Overwrite>true</Overwrite>
@@ -617,8 +596,8 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="Android\Debug\splash_image_def.xml" Configuration="Debug" Class="AndroidSplashImageDef">
-                    <Platform Name="Android">
+                <DeployFile LocalName="Android64\Debug\styles.xml" Configuration="Debug" Class="AndroidSplashStyles">
+                    <Platform Name="Android64">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -1011,12 +990,6 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="images\logo_72_72.png" Configuration="Release" Class="Android_LauncherIcon72">
-                    <Platform Name="Android">
-                        <RemoteName>ic_launcher.png</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
                 <DeployFile LocalName="images\splash_logo_960_720.png" Configuration="Debug" Class="Android_SplashImage960">
                     <Platform Name="Android">
                         <RemoteName>splash_image.png</RemoteName>
@@ -1029,8 +1002,15 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="Android\Release\AndroidManifest.xml" Configuration="Release" Class="ProjectAndroidManifest">
+                <DeployFile LocalName="images\logo_72_72.png" Configuration="Release" Class="Android_LauncherIcon72">
                     <Platform Name="Android">
+                        <RemoteName>ic_launcher.png</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="images\logo_144_144.png" Configuration="Release" Class="Android_LauncherIcon144">
+                    <Platform Name="Android64">
+                        <RemoteName>ic_launcher.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
