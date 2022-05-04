@@ -177,6 +177,7 @@ var
   FTracking : TRESTSuportTrackingController;
 begin
   try
+    Beep;
     FTracking := TRESTSuportTrackingController.Create;
     LimpaTela;
     DM_Main.memTableTracking.Active := False;
