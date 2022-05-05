@@ -11,7 +11,7 @@ uses
   Data.Bind.EngExt, Fmx.Bind.DBEngExt, Data.Bind.Components, Data.Bind.Grid,
   Data.Bind.DBScope, FMX.DateTimeCtrls, Controller.RESTSuportTracking, FMX.Memo, FMX.TabControl,
   FMX.Styles.Objects, System.Permissions, FMX.Media, ZXing.BarcodeFormat, ZXing.ReadResult,
-  ZXing.ScanManager;
+  ZXing.ScanManager, FMX.StdActns, FMX.MediaLibrary.Actions, FMX.MediaLibrary, FMX.Platform;
 
 type
   Tview_SuporteRemessa = class(TForm)
@@ -47,10 +47,11 @@ type
     TabStyleTextObject1: TTabStyleTextObject;
     Layout3: TLayout;
     Layout4: TLayout;
-    rectangleIniciar: TRectangle;
-    labelReader: TLabel;
-    cameraComponent: TCameraComponent;
     imageCamera: TImage;
+    actionTakePhoto: TAction;
+    Button2: TButton;
+    Button3: TButton;
+    TakePhotoFromCameraAction: TTakePhotoFromCameraAction;
     procedure imageExitMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
     procedure actionProcessarExecute(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -60,22 +61,21 @@ type
     procedure actionLerBarrasExecute(Sender: TObject);
     procedure actionIniciarExecute(Sender: TObject);
     procedure actionPararExecute(Sender: TObject);
-    procedure rectangleIniciarMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
-    procedure rectangleIniciarMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
     procedure Image2MouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
     procedure FormCreate(Sender: TObject);
     procedure Image1MouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
-    procedure cameraComponentSampleBufferReady(Sender: TObject; const ATime: TMediaTime);
+    procedure TabControl1Change(Sender: TObject);
+    procedure actionTakePhotoExecute(Sender: TObject);
+    procedure TakePhotoFromCameraActionDidFinishTaking(Image: TBitmap);
   private
     { Private declarations }
     FPermissionCamera, FPermissionReadExternalStorage,
     FPermissionWriteExternalStorage: string;
-    fScanInProgress: Boolean;
-    fFrameTake: Integer;
-    fScanBitmap: TBitmap;
-    procedure ParseImage();
+    procedure CameraDidFinishTakingHandler(Image: TBitmap);
+    procedure TakePhoto;
     procedure LimpaTela;
     procedure DetalhaEntregas(sAWB: string);
+    function Decode(): boolean;
     function ValidaDados(): boolean;
     procedure DisplayRationale(Sender: TObject;
       const APermissions: TArray<string>; const APostRationaleProc: TProc);
@@ -119,7 +119,7 @@ end;
 procedure Tview_SuporteRemessa.actionLerBarrasExecute(Sender: TObject);
 begin
   TabControl1.TabIndex := 1;
-//  actionIniciarExecute(Sender);
+  imageCamera.Bitmap := nil;
 end;
 
 procedure Tview_SuporteRemessa.actionLimparCamposExecute(Sender: TObject);
@@ -130,8 +130,6 @@ end;
 
 procedure Tview_SuporteRemessa.actionPararExecute(Sender: TObject);
 begin
-  cameraComponent.Active := False;
-  labelReader.Text := 'Iniciar';
   TabControl1.TabIndex := 0;
   editParametro.SetFocus;
 end;
@@ -142,33 +140,46 @@ begin
   DetalhaEntregas(editParametro.Text);
 end;
 
-procedure Tview_SuporteRemessa.cameraComponentSampleBufferReady(Sender: TObject; const ATime: TMediaTime);
+procedure Tview_SuporteRemessa.actionTakePhotoExecute(Sender: TObject);
 begin
-  TThread.Synchronize(TThread.CurrentThread,
-  procedure
-  begin
-    cameraComponent.SampleBufferToBitmap(imageCamera.Bitmap, True);
+  TakePhoto;
+end;
 
-    if (fScanInProgress) then
+procedure Tview_SuporteRemessa.CameraDidFinishTakingHandler(Image: TBitmap);
+begin
+  imageCamera.Bitmap.Assign(Image);
+  if not Decode() then
+    Common.Notificacao.TLoading.ToastMessage(Self, 'Código de barras inválido!', TAlignLayout.Bottom, $FFFF0000, $FFFFFFFF);
+end;
+
+function Tview_SuporteRemessa.Decode(): boolean;
+var
+  scanBitmap: TBitmap;
+  ScanManager: TScanManager;
+  rs: TReadResult;
+begin
+  try
+    Result := False;
+    scanBitmap := TBitmap.Create();
+    scanBitmap.Assign(imageCamera.Bitmap);
+    rs := nil;
+    ScanManager := TScanManager.Create(TBarcodeFormat.Auto, nil);
+    rs := ScanManager.Scan(scanBitmap);
+    if (rs <> nil) then
     begin
-      exit;
+      Common.Params.paramResultReadCode := rs.text;
+      editParametro.Text := Common.Params.paramResultReadCode;
+      TabControl1.TabIndex := 0;
+      DetalhaEntregas(Common.Params.paramResultReadCode);
+    end
+    else
+    begin
+      Exit;
     end;
-
-    { This code will take every 4 frame.
-    inc(fFrameTake);
-    if (fFrameTake mod 4 <> 0) then
-    begin
-      exit;
-    end;}
-
-    if Assigned(fScanBitmap) then
-      FreeAndNil(fScanBitmap);
-
-    fScanBitmap := TBitmap.Create();
-    fScanBitmap.Assign(imageCamera.Bitmap);
-
-    ParseImage();
-  end);
+    Result := True;
+  finally
+    ScanManager.Free;
+  end;
 end;
 
 procedure Tview_SuporteRemessa.DetalhaEntregas(sAWB: string);
@@ -278,81 +289,30 @@ begin
   TabStyleTextObject1.Text := '';
 end;
 
-procedure Tview_SuporteRemessa.ParseImage;
+procedure Tview_SuporteRemessa.TabControl1Change(Sender: TObject);
 begin
-  TThread.CreateAnonymousThread(
-    procedure
-    var
-      ReadResult: TReadResult;
-      ScanManager: TScanManager;
-
-    begin
-      try
-        fScanInProgress := True;
-        ScanManager := TScanManager.Create(TBarcodeFormat.Auto, nil);
-
-        try
-
-          ReadResult := ScanManager.Scan(fScanBitmap);
-
-        except
-          on E: Exception do
-          begin
-
-            TThread.Synchronize(TThread.CurrentThread,
-              procedure
-              begin
-                Common.Params.paramResultReadCode := E.Message;
-              end);
-
-            exit;
-          end;
-
-        end;
-
-        TThread.Synchronize(TThread.CurrentThread,
-          procedure
-          begin
-
-            if (ReadResult <> nil) then
-            begin
-              Common.Params.paramResultReadCode := UpperCase(ReadResult.Text);
-              cameraComponent.Active := False;
-              labelReader.Text := 'Iniciar';
-              TabControl1.TabIndex := 0;
-              editParametro.Text := Common.Params.paramResultReadCode;
-              DetalhaEntregas(Trim(editParametro.Text));
-            end;
-
-          end);
-
-      finally
-        if ReadResult <> nil then
-          FreeAndNil(ReadResult);
-
-        ScanManager.Free;
-        fScanInProgress := false;
-      end;
-
-    end).Start();
+  actionIniciarExecute(Sender);
 end;
 
-procedure Tview_SuporteRemessa.rectangleIniciarMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
+procedure Tview_SuporteRemessa.TakePhoto;
+var
+  LCameraService: IFMXCameraService;
+  LParams: TParamsPhotoQuery;
 begin
-  TRectangle(Sender).Opacity := 0.8;
-end;
-
-procedure Tview_SuporteRemessa.rectangleIniciarMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
-begin
-  TRectangle(Sender).Opacity := 1;
-  if labelReader.Text = 'Iniciar' then
+  if TPlatformServices.Current.SupportsPlatformService(IFMXCameraService, LCameraService) then
   begin
-    actionIniciarExecute(Sender);
-  end
-  else if labelReader.Text = 'Parar' then
-  begin
-    actionPararExecute(Sender);
+    LParams.RequiredResolution := TSize.Create(1024, 1024);
+    LParams.Editable := False;
+    LParams.NeedSaveToAlbum := False;
+    LParams.OnDidFinishTaking := CameraDidFinishTakingHandler;
+    LParams.OnDidCancelTaking := nil;
+    LCameraService.TakePhoto(nil, LParams);
   end;
+end;
+
+procedure Tview_SuporteRemessa.TakePhotoFromCameraActionDidFinishTaking(Image: TBitmap);
+begin
+  CameraDidFinishTakingHandler(Image);
 end;
 
 procedure Tview_SuporteRemessa.TakePicturePermissionRequestResult(Sender: TObject; const APermissions: TArray<string>;
@@ -363,12 +323,7 @@ begin
     (AGrantResults[1] = TPermissionStatus.Granted) and
     (AGrantResults[2] = TPermissionStatus.Granted) then
     begin
-      cameraComponent.Active := false;
-      cameraComponent.Quality := FMX.Media.TVideoCaptureQuality.MediumQuality;
-      cameraComponent.Kind := FMX.Media.TCameraKind.BackCamera;
-      cameraComponent.FocusMode := FMX.Media.TFocusMode.ContinuousAutoFocus;
-      cameraComponent.Active := True;
-      labelReader.Text := 'Parar';
+      //TakePhoto;
     end
   else
     TDialogService.ShowMessage
