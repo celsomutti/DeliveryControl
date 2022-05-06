@@ -52,6 +52,7 @@ type
     Button2: TButton;
     Button3: TButton;
     TakePhotoFromCameraAction: TTakePhotoFromCameraAction;
+    Label1: TLabel;
     procedure imageExitMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
     procedure actionProcessarExecute(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -198,7 +199,7 @@ begin
       editTelefone1.Text := DM_Main.memTableTrackingnum_telefone_1.AsString;
       editTelefone2.Text := DM_Main.memTableTrackingnum_telefone_2.AsString;
       editTelefone3.Text := DM_Main.memTableTrackingnum_telefone_3.AsString;
-      editEndereco.Text := DM_Main.memTableTrackingdes_logradouro.AsString + ', ' + #13 +
+      editEndereco.Text := DM_Main.memTableTrackingdes_logradouro.AsString + ', ' +
                            DM_Main.memTableTrackingnum_logradouro.AsString + #13 +
                            DM_Main.memTableTrackingnom_bairro.AsString + #13 +
                            DM_Main.memTableTrackingnom_cidade_uf.AsString + #13 +
