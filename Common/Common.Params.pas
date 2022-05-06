@@ -13,6 +13,7 @@ var
   paramCodigoCadastro: System.Integer;
   paramCodigosEntregadores: System.string;
   paramResultReadCode: System.string;
+  paramUserFinance: System.integer;
 implementation
 
 end.

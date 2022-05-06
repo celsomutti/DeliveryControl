@@ -60,7 +60,7 @@ implementation
 
 {$R *.fmx}
 
-uses View.Extratos, View.Boletos, View.EntregasDia, View.SuporteRemessa;
+uses View.Extratos, View.Boletos, View.EntregasDia, View.SuporteRemessa, Common.Params;
 
 procedure Tview_Main.actionBoletosExecute(Sender: TObject);
 begin
@@ -69,6 +69,11 @@ end;
 
 procedure Tview_Main.actionEntregasDiaExecute(Sender: TObject);
 begin
+  if Common.Params.paramUserFinance = 0 then
+  begin
+    ShowMessage('Usuário não tem permissão para acessar este módulo!');
+    Exit;
+  end;
    OpenFormEntregasDia;
 end;
 
@@ -79,6 +84,11 @@ end;
 
 procedure Tview_Main.actionExtratosExecute(Sender: TObject);
 begin
+  if Common.Params.paramUserFinance = 0 then
+  begin
+    ShowMessage('Usuário não tem permissão para acessar este módulo!');
+    Exit;
+  end;
   OpenFormExtratos;
 end;
 

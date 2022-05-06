@@ -130,13 +130,13 @@ end;
 function TRESTCadastro.RetornaEntregadores(iCadastro: integer): Boolean;
 var
   jsonObj, jo: TJSONObject;
-  jvCodigo: TJSONValue;
+  jvCodigo, jvDom: TJSONValue;
   sCodigos: String;
   ja: TJSONArray;
   i: integer;
 begin
   Result := false;
-  StartRestRequest('/dc_lista_entregadores.php');
+  StartRestRequest('/dc_lista_entregadores_new.php');
   DM_Main.RESTRequest.AddParameter('cadastro', iCadastro.ToString, pkGETorPOST);
   DM_Main.RESTResponseDataSetAdapter.Active := False;
   DM_Main.RESTRequest.Execute;
@@ -152,6 +152,8 @@ begin
     begin
       jsonObj := (ja.Get(i) as TJSONObject);
       jvCodigo := jsonObj.Get(0).JsonValue;
+      jvDom := jsonObj.Get(1).JsonValue;
+      Common.Params.paramUserFinance := StrToIntDef(jvDom.Value, 0);
       if not Common.Params.paramCodigosEntregadores.IsEmpty then
       begin
         Common.Params.paramCodigosEntregadores := Common.Params.paramCodigosEntregadores + ',';
