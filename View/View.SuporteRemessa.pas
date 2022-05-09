@@ -53,6 +53,7 @@ type
     Button3: TButton;
     TakePhotoFromCameraAction: TTakePhotoFromCameraAction;
     Label1: TLabel;
+    editRemessa: TEdit;
     procedure imageExitMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
     procedure actionProcessarExecute(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -205,6 +206,7 @@ begin
                            DM_Main.memTableTrackingnom_cidade_uf.AsString + #13 +
                            'CEP: ' + DM_Main.memTableTrackingnum_cep.AsString;
      TabStyleTextObject1.Text := DM_Main.memTableTrackingdes_complemento.Text;
+     editRemessa.Text := 'Remesasa: ' + DM_Main.memTableTrackingnum_remessa.AsString;
     end;
     if DM_Main.memTableTrackingnum_logradouro.AsString.IsEmpty then
     begin
@@ -288,6 +290,7 @@ begin
   editTelefone3.Text := '';
   editEndereco.Lines.Clear;
   TabStyleTextObject1.Text := '';
+  editRemessa.Text := '';
 end;
 
 procedure Tview_SuporteRemessa.TabControl1Change(Sender: TObject);
