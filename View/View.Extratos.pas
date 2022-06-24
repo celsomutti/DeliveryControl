@@ -167,6 +167,10 @@ begin
         else if Trim(DM_Main.memTableExtratocod_cliente.AsString) = '5' then
         begin
           sCliente := 'RODOÊ';
+        end
+        else if Trim(DM_Main.memTableExtratocod_cliente.AsString) = '8' then
+        begin
+          sCliente := 'MANDAÊ';
         end;
         dVerba := StrToFloatDef(StringReplace(DM_Main.memTableExtratoval_verba.AsString, '.', ',', [rfReplaceAll]),0);
         iEntregas := StrToIntDef(DM_Main.memTableExtratoqtd_entregas.AsString, 0);
@@ -464,6 +468,10 @@ begin
         else if Trim(DM_Main.memTableEntregascod_cliente.AsString) = '7' then
         begin
           sCliente := 'REDE FORTE';
+        end
+        else if Trim(DM_Main.memTableEntregascod_cliente.AsString) = '8' then
+        begin
+          sCliente := 'MANDAÊ';
         end;
         dVerba := StrToFloatDef(StringReplace(DM_Main.memTableEntregasval_verba.AsString, '.', ',', [rfReplaceAll]),0);
         iEntregas := StrToIntDef(DM_Main.memTableEntregasqtd_entregas.AsString, 0);

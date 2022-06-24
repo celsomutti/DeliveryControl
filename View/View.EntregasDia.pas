@@ -193,6 +193,10 @@ begin
         else if Trim(sCodcliente) = '7' then
         begin
           sCliente := 'REDE FORTE';
+        end
+        else if Trim(sCodcliente) = '8'then
+        begin
+          sCliente := 'MANDAÊ';
         end;
         iEntregas := StrToIntDef(DM_Main.memTableEntregasDiaqtd_entregas.AsString, 0);
         sQuantidade := FormatFloat('#,##0;(#,##0)', iEntregas);
