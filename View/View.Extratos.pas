@@ -185,21 +185,7 @@ begin
         Inc(i, 1);
         if DM_Main.memTableExtratonum_extrato.Text.Length > 0 then
         begin
-          if sExtratos.Length = 0 then
-          begin
-            sExtratos := DM_Main.memTableExtratonum_extrato.Text;
-          end
-          else
-          begin
-            if Pos(DM_Main.memTableExtratonum_extrato.Text,sExtratos) = 0 then
-            begin
-              if sExtratos.Length > 0 then
-              begin
-                sExtratos := sExtratos + ',';
-              end;
-              sExtratos := sExtratos +  DM_Main.memTableExtratonum_extrato.Text;
-            end;
-          end;
+          sExtratos := DM_Main.memTableExtratonum_extrato.Text;
         end;
         DM_Main.memTableExtrato.Next;
       end;
