@@ -330,6 +330,7 @@ begin
       //TakePhoto;
     end
   else
+
     TDialogService.ShowMessage
       ('Não é possível visualizar o código porque as permissões necessárias não são todas concedidas')
 end;
