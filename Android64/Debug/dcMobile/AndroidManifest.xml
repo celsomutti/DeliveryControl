@@ -6,7 +6,7 @@
         android:versionName="1.12.0"
         android:installLocation="auto">
 
-    <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="29" />
+    <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="30" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -26,7 +26,8 @@
         android:theme="@style/AppTheme"
         android:hardwareAccelerated="true"
         android:usesCleartextTraffic="true"
-        android:resizeableActivity="false">
+        android:resizeableActivity="false"
+        android:requestLegacyExternalStorage="true">
 
         
         

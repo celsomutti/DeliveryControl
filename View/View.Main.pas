@@ -29,6 +29,9 @@ type
     actionSuporte: TAction;
     rectangleSuporte: TRectangle;
     Label1: TLabel;
+    rectangleNFsFaturas: TRectangle;
+    Label2: TLabel;
+    actionNFsFaturas: TAction;
     procedure imageExitMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
     procedure actionExitExecute(Sender: TObject);
     procedure rectangleExtratoMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
@@ -43,12 +46,16 @@ type
     procedure actionSuporteExecute(Sender: TObject);
     procedure rectangleSuporteMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
     procedure rectangleSuporteMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
+    procedure rectangleNFsFaturasMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
+    procedure rectangleNFsFaturasMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
+    procedure actionNFsFaturasExecute(Sender: TObject);
   private
     { Private declarations }
     procedure OpenFormExtratos;
     procedure OpenFormBoletos;
     procedure OpenFormEntregasDia;
     procedure OpenFormSuporte;
+    procedure OpenFormNFeFatura;
   public
     { Public declarations }
   end;
@@ -60,7 +67,7 @@ implementation
 
 {$R *.fmx}
 
-uses View.Extratos, View.Boletos, View.EntregasDia, View.SuporteRemessa, Common.Params;
+uses View.Extratos, View.Boletos, View.EntregasDia, View.SuporteRemessa, Common.Params, View.EnvioNFsFatura;
 
 procedure Tview_Main.actionBoletosExecute(Sender: TObject);
 begin
@@ -90,6 +97,11 @@ begin
     Exit;
   end;
   OpenFormExtratos;
+end;
+
+procedure Tview_Main.actionNFsFaturasExecute(Sender: TObject);
+begin
+  OpenFormNFeFatura;
 end;
 
 procedure Tview_Main.actionSuporteExecute(Sender: TObject);
@@ -126,6 +138,15 @@ begin
     Application.CreateForm(Tview_Extratos, view_Extratos);
   end;
   view_Extratos.Show;
+end;
+
+procedure Tview_Main.OpenFormNFeFatura;
+begin
+  if not Assigned(view_EnvioNfsFatura) then
+  begin
+    Application.CreateForm(Tview_EnvioNfsFatura, view_EnvioNfsFatura);
+  end;
+  view_EnvioNfsFatura.Show;
 end;
 
 procedure Tview_Main.OpenFormSuporte;
@@ -170,6 +191,12 @@ begin
   actionExtratosExecute(Sender);
 end;
 
+procedure Tview_Main.rectangleNFsFaturasMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
+begin
+  TRectangle(Sender).Opacity := 0.8;
+  actionNFsFaturasExecute(Sender);
+end;
+
 procedure Tview_Main.rectangleSuporteMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
 begin
   TRectangle(Sender).Opacity := 0.8;
@@ -179,6 +206,12 @@ procedure Tview_Main.rectangleSuporteMouseUp(Sender: TObject; Button: TMouseButt
 begin
  TRectangle(Sender).Opacity := 1;
  actionSuporteExecute(Sender);
+end;
+
+procedure Tview_Main.rectangleNFsFaturasMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
+begin
+  TRectangle(Sender).Opacity := 1;
+  actionNFsFaturasExecute(Sender);
 end;
 
 end.

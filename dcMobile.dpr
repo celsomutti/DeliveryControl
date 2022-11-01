@@ -38,9 +38,9 @@ uses
   Controller.RESTEntregasDia in 'Controller\Controller.RESTEntregasDia.pas',
   View.Extratos in 'View\View.Extratos.pas' {view_Extratos},
   View.EntregasDia in 'View\View.EntregasDia.pas' {view_EntregasDia},
-  View.SuporteRemessa in 'View\View.SuporteRemessa.pas' {view_SuporteRemessa},
-  Model.RESTBoletos in 'Model\Model.RESTBoletos.pas',
-  Controller.RESTBoletos in 'Controller\Controller.RESTBoletos.pas',
+  View.EnvioNFsFatura in 'View\View.EnvioNFsFatura.pas' {view_EnvioNfsFatura},
+  Model.RESTNFsFaturas in 'Model\Model.RESTNFsFaturas.pas',
+  Controller.RESTNFsFaturas in 'Controller\Controller.RESTNFsFaturas.pas',
   ZXing.ReadResult in 'Lib\Classes\Common\ZXing.ReadResult.pas',
   ZXing.ScanManager in 'Lib\Classes\ZXing.ScanManager.pas',
   ZXing.BarcodeFormat in 'Lib\Classes\Common\ZXing.BarcodeFormat.pas',
@@ -116,7 +116,12 @@ uses
   ZXing.InvertedLuminanceSource in 'Lib\Classes\Filtering\ZXing.InvertedLuminanceSource.pas',
   ZXing.LuminanceSource in 'Lib\Classes\Filtering\ZXing.LuminanceSource.pas',
   ZXing.PlanarYUVLuminanceSource in 'Lib\Classes\Filtering\ZXing.PlanarYUVLuminanceSource.pas',
-  ZXing.RGBLuminanceSource in 'Lib\Classes\Filtering\ZXing.RGBLuminanceSource.pas';
+  ZXing.RGBLuminanceSource in 'Lib\Classes\Filtering\ZXing.RGBLuminanceSource.pas',
+  View.SuporteRemessa in 'View\View.SuporteRemessa.pas' {view_SuporteRemessa},
+  u99Permissions in 'Common\u99Permissions.pas',
+  View.Explorer in 'View\View.Explorer.pas' {view_Explorer},
+  Model.RESTBoletos in 'Model\Model.RESTBoletos.pas',
+  Controller.RESTBoletos in 'Controller\Controller.RESTBoletos.pas';
 
 {$R *.res}
 

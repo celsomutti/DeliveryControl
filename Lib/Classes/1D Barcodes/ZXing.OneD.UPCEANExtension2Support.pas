@@ -190,3 +190,4 @@ initialization
 finalization
   TUPCEANExtension2Support.FinalizeClass;
 end.
+

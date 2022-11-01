@@ -1,0 +1,75 @@
+inherited view_EnvioNfsFatura_LgXhdpiPh: Tview_EnvioNfsFatura_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 0
+  inherited layoutPadrao: TLayout
+    Size.Width = 450.000000000000000000
+    Size.Height = 695.000000000000000000
+    inherited layoutFiltro: TLayout
+      Margins.Top = 10.000000000000000000
+      Position.Y = 43.000000000000000000
+      Size.Width = 450.000000000000000000
+      inherited labelDescricao: TLabel
+        Margins.Top = 15.000000000000000000
+        Margins.Bottom = 15.000000000000000000
+        Size.Width = 440.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000100000004000000}
+      end
+    end
+    inherited layoutTitle: TLayout
+      Size.Width = 450.000000000000000000
+      inherited rectangleTitle: TRectangle
+        Size.Width = 450.000000000000000000
+        inherited imageExit: TImage
+          MultiResBitmap.Height = 48
+          MultiResBitmap.Width = 48
+        end
+      end
+      inherited labelTitle: TLabel
+        Size.Width = 450.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000100000004000000}
+      end
+    end
+    inherited layoutBody: TLayout
+      Size.Width = 450.000000000000000000
+      Size.Height = 580.000000000000000000
+      inherited TabControl1: TTabControl
+        Size.Width = 450.000000000000000000
+        Size.Height = 580.000000000000000000
+        Sizes = (
+          450s
+          580s)
+        inherited TabItem2: TTabItem
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
+          inherited Layout3: TLayout
+            Size.Width = 450.000000000000000000
+            Size.Height = 580.000000000000000000
+            inherited Layout4: TLayout
+              Position.Y = 534.000000000000000000
+              Size.Width = 450.000000000000000000
+              inherited SpeedButton4: TSpeedButton
+                Position.X = 397.000000000000000000
+              end
+            end
+            inherited imageCamera: TImage
+              Size.Width = 450.000000000000000000
+              Size.Height = 534.000000000000000000
+            end
+            inherited imageOtherfiles: TImage
+              MultiResBitmap.Height = 225
+              MultiResBitmap.Width = 225
+            end
+          end
+        end
+      end
+    end
+    inherited layoutVencimento: TLayout
+      Position.Y = 75.000000000000000000
+      Size.Width = 450.000000000000000000
+      inherited AniIndicator1: TAniIndicator
+        Enabled = True
+      end
+    end
+  end
+end
