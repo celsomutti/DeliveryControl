@@ -12,9 +12,11 @@ uses
   Data.Bind.DBScope, FMX.DateTimeCtrls, Controller.RESTSuportTracking, FMX.Memo, FMX.TabControl,
   FMX.Styles.Objects, System.Permissions, FMX.Media, ZXing.BarcodeFormat, ZXing.ReadResult,
   ZXing.ScanManager, FMX.StdActns, FMX.MediaLibrary.Actions, FMX.MediaLibrary, FMX.Platform, ScSSHClient, ScBridge, ScSFTPClient,
-  System.IOUtils, System.Threading, u99Permissions, Controller.RESTNFsFaturas;
+  System.IOUtils, System.Threading, u99Permissions, Controller.RESTNFsFaturas, Androidapi.Helpers, FMX.Helpers.Android,
+  Androidapi.JNI.GraphicsContentViewText, Androidapi.JNI.Net, Androidapi.JNI.JavaTypes, Androidapi.JNI.provider,
+  Androidapi.JNI.App, AndroidAPI.jNI.OS, Androidapi.JNIBridge, IdUri, FMX.Platform.Android;
 
-type
+  type
   Tview_EnvioNfsFatura = class(TForm)
     layoutPadrao: TLayout;
     actionListExtratos: TActionList;
@@ -69,6 +71,7 @@ type
     procedure imageExitClick(Sender: TObject);
     procedure imageExitMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
     procedure actionFecharExecute(Sender: TObject);
+    procedure imageCameraClick(Sender: TObject);
   private
     { Private declarations }
     permissao : T99Permissions;
@@ -77,8 +80,35 @@ type
     procedure TrataPermissao(Sender: TObject);
     procedure TrataPermissaoErro(Sender: TObject);
     function SalvaNFsFatura(): boolean;
+    function GetFileUri(aFile: String): JNet_Uri;
+    procedure OpenDPDF(sFile: string);
   public
     { Public declarations }
+  end;
+
+  type
+  JFileProvider = interface;
+  JFileProviderClass = interface(JContentProviderClass)
+    ['{33A87969-5731-4791-90F6-3AD22F2BB822}']
+    {class} function getUriForFile(context: JContext; authority: JString; _file: JFile): Jnet_Uri; cdecl;
+    {class} function init: JFileProvider; cdecl;
+  end;
+
+  [JavaSignature('android/support/v4/content/FileProvider')]
+  JFileProvider = interface(JContentProvider)
+    ['{12F5DD38-A3CE-4D2E-9F68-24933C9D221B}']
+    procedure attachInfo(context: JContext; info: JProviderInfo); cdecl;
+    function delete(uri: Jnet_Uri; selection: JString; selectionArgs: TJavaObjectArray<JString>): Integer; cdecl;
+    function getType(uri: Jnet_Uri): JString; cdecl;
+    function insert(uri: Jnet_Uri; values: JContentValues): Jnet_Uri; cdecl;
+    function onCreate: Boolean; cdecl;
+    function openFile(uri: Jnet_Uri; mode: JString): JParcelFileDescriptor; cdecl;
+    function query(uri: Jnet_Uri; projection: TJavaObjectArray<JString>; selection: JString; selectionArgs: TJavaObjectArray<JString>;
+      sortOrder: JString): JCursor; cdecl;
+    function update(uri: Jnet_Uri; values: JContentValues; selection: JString; selectionArgs: TJavaObjectArray<JString>): Integer; cdecl;
+  end;
+
+  TJFileProvider = class(TJavaGenericImport<JFileProviderClass, JFileProvider>)
   end;
 
 var
@@ -96,11 +126,6 @@ implementation
 
 uses
 
-{$IFDEF ANDROID}
-  Androidapi.Helpers,
-  Androidapi.JNI.JavaTypes,
-  Androidapi.JNI.Os,
-{$ENDIF}
 DM.Main, Common.Params, Common.Notificacao, FMX.DialogService, View.Explorer;
 
 procedure Tview_EnvioNfsFatura.actionEnviarNFsExecute(Sender: TObject);
@@ -163,6 +188,24 @@ begin
   iTypeFile := 0;
 end;
 
+function Tview_EnvioNfsFatura.GetFileUri(aFile: String): JNet_Uri;
+var
+  FileAtt      : JFile;
+  Auth         : JString;
+  PackageName  : String;
+begin
+  PackageName := JStringToString(SharedActivityContext.getPackageName);
+  FileAtt     := TJFile.JavaClass.init(StringToJString(aFile));
+  Auth        := StringToJString(Packagename+'.fileprovider');
+  Result      := TJFileProvider.JavaClass.getUriForFile(TAndroidHelper.Context, Auth, FileAtt);
+end;
+
+procedure Tview_EnvioNfsFatura.imageCameraClick(Sender: TObject);
+begin
+  if iTypeFile = 1 then
+    OpenDPDF(sOtherFile);
+end;
+
 procedure Tview_EnvioNfsFatura.imageExitClick(Sender: TObject);
 begin
   action
@@ -171,6 +214,45 @@ end;
 procedure Tview_EnvioNfsFatura.imageExitMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
 begin
   actionFechar.Execute;
+end;
+
+procedure Tview_EnvioNfsFatura.OpenDPDF(sFile: string);
+var
+  Str    : TStringStream;
+  path   : String;
+  Intent : JIntent;
+  URI    : JNet_Uri;
+
+  SPathDocs : string;
+begin
+//  SPathDocs := System.IOUtils.TPath.GetDocumentsPath + PathDelim;
+//  Path := System.IOUtils.TPath.GetSharedDocumentsPath + PathDelim + 'tmp' + PathDelim;
+//
+//  if Not TDirectory.Exists(Path) then
+//    TDirectory.CreateDirectory(Path);
+//
+//  if Switch1.IsChecked then
+//  begin
+//    SFile := 'Motorola_One.pdf';
+//
+//    TFile.Copy(SPathDocs + SFile, Path + SFile, True);
+//  end
+//  else
+//  begin
+//    SFile := 'printid.pdf';
+//    Str  := TStringStream.Create;
+//    Http.Get('https://www.controlid.com.br/userguide/printid.pdf', Str);
+//
+//    Str.Position := 0;
+//    Str.SaveToFile(Path + SFile);
+//    Str.DisposeOf;
+//  end;
+
+  Intent := TJIntent.JavaClass.init(TJintent.JavaClass.ACTION_VIEW);
+  Uri    := GetFileURI(SFile);
+  Intent.setDataAndType(Uri, StringToJString('application/pdf'));
+  Intent.setFlags(TJintent.JavaClass.FLAG_GRANT_READ_URI_PERMISSION);
+  TAndroidHelper.Activity.startActivity(Intent);
 end;
 
 procedure Tview_EnvioNfsFatura.PreparaArquivo;
@@ -272,6 +354,7 @@ procedure Tview_EnvioNfsFatura.TrataPermissao(Sender: TObject);
 begin
     iTypeFile := 0;
     //imageOtherFiles.Visible := False;
+    imageCamera.Visible := True;
     if not Assigned(view_Explorer) then
     begin
       Application.CreateForm(Tview_Explorer, view_Explorer);
@@ -292,12 +375,12 @@ begin
             ImageCamera.Bitmap.LoadFromFile(view_Explorer.arquivo)
         else if Pos('.png', view_Explorer.arquivo) > 0 then
             ImageCamera.Bitmap.LoadFromFile(view_Explorer.arquivo)
-        else
+        else if Pos('.pdf', view_Explorer.arquivo) > 0 then
           begin
+            sOtherFile := view_Explorer.arquivo;
             ImageCamera.Bitmap.Assign(imageOtherFiles.Bitmap);
             iTypeFile := 1;
-            sOtherFile := view_Explorer.arquivo;
-            //imageOtherFiles.Visible := True;
+            showmessage('Arquivo Carregado. Clique na imagem para abrir o arquivo PDF');
           end;
     end);
 end;

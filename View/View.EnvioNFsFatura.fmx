@@ -226,6 +226,7 @@ object view_EnvioNfsFatura: Tview_EnvioNfsFatura
               Size.Width = 369.000000000000000000
               Size.Height = 409.000000000000000000
               Size.PlatformDefault = False
+              OnClick = imageCameraClick
             end
             object imageOtherfiles: TImage
               MultiResBitmap.Height = 225
