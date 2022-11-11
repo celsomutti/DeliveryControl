@@ -300,7 +300,7 @@ begin
       if FExtravios.SearchExtraviosExtrato(sExtratos) then
       begin
         DM_Main.memTableExtravios.First;
-        i := Pred(stringGridExtrato.RowCount);
+        i := Pred(stringGridExtrato.RowCount + 1);
         if not DM_Main.memTableExtravios.IsEmpty then
         begin
           stringGridExtrato.RowCount := stringGridExtrato.RowCount + DM_Main.memTableExtravios.RecordCount;
@@ -345,7 +345,7 @@ begin
       if FLancamentos.SearchLancamentosExtrato(sExtratos) then
       begin
         DM_Main.memTableLancamentos.First;
-        i := Pred(stringGridExtrato.RowCount);
+        i := Pred(stringGridExtrato.RowCount + 1);
         if not DM_Main.memTableLancamentos.IsEmpty then
         begin
           stringGridExtrato.RowCount := stringGridExtrato.RowCount + DM_Main.memTableLancamentos.RecordCount;
