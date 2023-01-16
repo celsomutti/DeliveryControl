@@ -37,12 +37,15 @@ type
     labelDescricao: TLabel;
     actionDetalhar: TAction;
     CornerButton1: TCornerButton;
+    currencyColumnVerba: TCurrencyColumn;
     procedure imageExitMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
     procedure actionProcessarExecute(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure imageSearchMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
     procedure FormShow(Sender: TObject);
     procedure actionDetalharExecute(Sender: TObject);
+    procedure integerColumnCodClienteGesture(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
+    procedure integerColumnQtdeGesture(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
   private
     { Private declarations }
     procedure ProcessExtrato(sentregador, sdataini, sdatafim: String);
@@ -137,9 +140,10 @@ end;
 procedure Tview_EntregasDia.ProcessExtrato(sentregador, sdataini, sdatafim: String);
 var
   FEntregas: TRESTEntregasDiaController;
-  sDescricao, sQuantidade, sCliente, sCodCliente, sCodClienteOld: String;
+  sDescricao, sQuantidade, sCliente, sCodCliente, sCodClienteOld, sVerba: String;
   sData: String;
   iTotalCliente, iTotalGeral, i, iEntregas: Integer;
+  dVerba: Double;
 begin
   try
     FEntregas := TRESTEntregasDiaController.Create;
@@ -174,6 +178,7 @@ begin
         sDescricao := '';
         sQuantidade := '';
         sCliente := '';
+        sVerba := '';
         if Trim(sCodcliente) = '1' then
         begin
           sCliente := 'TFO';
@@ -199,7 +204,9 @@ begin
           sCliente := 'MANDAÊ';
         end;
         iEntregas := StrToIntDef(DM_Main.memTableEntregasDiaqtd_entregas.AsString, 0);
+        dVerba := StrToFloatDef(DM_Main.memTableEntregasDiaval_verba.AsString, 0);
         sQuantidade := FormatFloat('#,##0;(#,##0)', iEntregas);
+        sVerba := FormatFloat('#,##0.00;(#,##0.00)', dVerba);
         if DM_Main.memTableEntregasdes_tipo.AsString = '' then
         begin
           sDescricao := 'ENTREGA';
@@ -211,6 +218,7 @@ begin
         stringGridExtrato.Cells[2,i] := sDescricao;
         stringGridExtrato.Cells[3,i] := sQuantidade;
         stringGridExtrato.Cells[4,i] := sCodCliente;
+        stringGridExtrato.Cells[5,i] := sVerba;
         iTotalCliente := iTotalCliente + iEntregas;
         iTotalGeral := iTotalGeral + iEntregas;
         DM_Main.memTableEntregasDia.Next;
@@ -263,6 +271,7 @@ begin
   end;
   Result := True;
 end;
+
 
 end.
 

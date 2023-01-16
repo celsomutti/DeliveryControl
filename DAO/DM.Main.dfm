@@ -370,6 +370,10 @@ object DM_Main: TDM_Main
     object memTableEntregasDiades_tipo: TStringField
       FieldName = 'des_tipo'
     end
+    object memTableEntregasDiaval_verba: TStringField
+      FieldName = 'val_verba'
+      Size = 12
+    end
   end
   object memTableEntregasDetalhe: TFDMemTable
     FetchOptions.AssignedValues = [evMode]

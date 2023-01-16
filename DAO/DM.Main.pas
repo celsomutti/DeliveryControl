@@ -92,6 +92,7 @@ type
     memTableTrackingnum_telefone_3: TStringField;
     memTableTrackingdes_complemento: TStringField;
     imageList16_16: TImageList;
+    memTableEntregasDiaval_verba: TStringField;
   private
     { Private declarations }
   public
