@@ -93,6 +93,8 @@ type
     memTableTrackingdes_complemento: TStringField;
     imageList16_16: TImageList;
     memTableEntregasDiaval_verba: TStringField;
+    memTableEntregasDianom_cliente: TStringField;
+    memTableExtratonom_cliente: TStringField;
   private
     { Private declarations }
   public

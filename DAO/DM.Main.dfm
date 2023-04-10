@@ -169,6 +169,10 @@ object DM_Main: TDM_Main
       FieldName = 'cod_cliente'
       Size = 255
     end
+    object memTableExtratonom_cliente: TStringField
+      FieldName = 'nom_cliente'
+      Size = 70
+    end
     object memTableExtratodat_credito: TWideStringField
       DisplayLabel = 'Data Cr'#233'dito'
       FieldName = 'dat_credito'
@@ -358,6 +362,10 @@ object DM_Main: TDM_Main
     object memTableEntregasDiacod_cliente: TStringField
       FieldName = 'cod_cliente'
       Size = 5
+    end
+    object memTableEntregasDianom_cliente: TStringField
+      FieldName = 'nom_cliente'
+      Size = 70
     end
     object memTableEntregasDiadat_baixa: TStringField
       FieldName = 'dat_baixa'

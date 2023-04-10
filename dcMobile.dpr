@@ -30,7 +30,6 @@ uses
   Model.RESTExtravios in 'Model\Model.RESTExtravios.pas',
   Controller.RESTExtravios in 'Controller\Controller.RESTExtravios.pas',
   Common.Utils in 'Common\Common.Utils.pas',
-  View.Extratos2 in 'View\View.Extratos2.pas' {view_Extratos2},
   Model.RESTEentregas in 'Model\Model.RESTEentregas.pas',
   Controller.RESTEntregas in 'Controller\Controller.RESTEntregas.pas',
   View.EntregasDetalhe in 'View\View.EntregasDetalhe.pas' {view_EntregasDetalhe},

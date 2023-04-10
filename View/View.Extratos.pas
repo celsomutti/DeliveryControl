@@ -155,8 +155,8 @@ begin
       begin
         sDescricao := '';
         sQuantidade := '';
-        sCliente := '';
-        if Trim(DM_Main.memTableExtratocod_cliente.AsString) = '1' then
+        sCliente := DM_Main.memTableExtratonom_cliente.AsString;
+        {if Trim(DM_Main.memTableExtratocod_cliente.AsString) = '1' then
         begin
           sCliente := 'TFO';
         end
@@ -171,7 +171,7 @@ begin
         else if Trim(DM_Main.memTableExtratocod_cliente.AsString) = '8' then
         begin
           sCliente := 'MANDAÊ';
-        end;
+        end;}
         dVerba := StrToFloatDef(StringReplace(DM_Main.memTableExtratoval_verba.AsString, '.', ',', [rfReplaceAll]),0);
         iEntregas := StrToIntDef(DM_Main.memTableExtratoqtd_entregas.AsString, 0);
         sQuantidade := FormatFloat('#,##0;(#,##0)', iEntregas);

@@ -11,10 +11,10 @@ uses
   Data.Bind.EngExt, Fmx.Bind.DBEngExt, Data.Bind.Components, Data.Bind.Grid,
   Data.Bind.DBScope, FMX.DateTimeCtrls, Controller.RESTSuportTracking, FMX.Memo, FMX.TabControl,
   FMX.Styles.Objects, System.Permissions, FMX.Media, ZXing.BarcodeFormat, ZXing.ReadResult,
-  ZXing.ScanManager, FMX.StdActns, FMX.MediaLibrary.Actions, FMX.MediaLibrary, FMX.Platform, ScSSHClient, ScBridge, ScSFTPClient,
+  ZXing.ScanManager, FMX.StdActns, FMX.MediaLibrary.Actions, FMX.MediaLibrary, FMX.Platform,
   System.IOUtils, System.Threading, u99Permissions, Controller.RESTNFsFaturas, Androidapi.Helpers, FMX.Helpers.Android,
   Androidapi.JNI.GraphicsContentViewText, Androidapi.JNI.Net, Androidapi.JNI.JavaTypes, Androidapi.JNI.provider,
-  Androidapi.JNI.App, AndroidAPI.jNI.OS, Androidapi.JNIBridge, IdUri, FMX.Platform.Android;
+  Androidapi.JNI.App, AndroidAPI.jNI.OS, Androidapi.JNIBridge, IdUri, FMX.Platform.Android, ScBridge, ScSFTPClient, ScSSHClient;
 
   type
   Tview_EnvioNfsFatura = class(TForm)
@@ -40,9 +40,6 @@ uses
     imageCamera: TImage;
     actionTakePhoto: TAction;
     TakePhotoFromCameraAction: TTakePhotoFromCameraAction;
-    ScSSHClient: TScSSHClient;
-    ScSFTPClient: TScSFTPClient;
-    ScFileStorage: TScFileStorage;
     actionEnviarNFs: TAction;
     layoutVencimento: TLayout;
     dataVencimento: TDateEdit;
@@ -57,6 +54,9 @@ uses
     SpeedButton4: TSpeedButton;
     actionFechar: TAction;
     labelAviso: TLabel;
+    ScSFTPClient: TScSFTPClient;
+    ScSSHClient: TScSSHClient;
+    ScFileStorage: TScFileStorage;
     procedure FormShow(Sender: TObject);
     procedure actionLerBarrasExecute(Sender: TObject);
     procedure actionPararExecute(Sender: TObject);

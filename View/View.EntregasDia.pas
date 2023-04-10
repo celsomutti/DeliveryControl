@@ -44,8 +44,8 @@ type
     procedure imageSearchMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
     procedure FormShow(Sender: TObject);
     procedure actionDetalharExecute(Sender: TObject);
-    procedure integerColumnCodClienteGesture(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
-    procedure integerColumnQtdeGesture(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
+   //procedure integerColumnCodClienteGesture(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
+//    procedure integerColumnQtdeGesture(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
   private
     { Private declarations }
     procedure ProcessExtrato(sentregador, sdataini, sdatafim: String);
@@ -160,6 +160,7 @@ begin
       while not DM_Main.memTableEntregasDia.Eof do
       begin
         sCodCliente := DM_Main.memTableEntregasDiacod_cliente.AsString;
+        sCliente := DM_Main.memTableEntregasDianom_cliente.AsString;
         sData := Copy(DM_Main.memTableEntregasDiadat_baixa.AsString,9,2) + '/' +
                  Copy(DM_Main.memTableEntregasDiadat_baixa.AsString,6,2) + '/' +
                  Copy(DM_Main.memTableEntregasDiadat_baixa.AsString,1,4);
@@ -179,7 +180,7 @@ begin
         sQuantidade := '';
         sCliente := '';
         sVerba := '';
-        if Trim(sCodcliente) = '1' then
+        {if Trim(sCodcliente) = '1' then
         begin
           sCliente := 'TFO';
         end
@@ -202,7 +203,7 @@ begin
         else if Trim(sCodcliente) = '8'then
         begin
           sCliente := 'MANDAÊ';
-        end;
+        end;    }
         iEntregas := StrToIntDef(DM_Main.memTableEntregasDiaqtd_entregas.AsString, 0);
         dVerba := StrToFloatDef(DM_Main.memTableEntregasDiaval_verba.AsString, 0);
         sQuantidade := FormatFloat('#,##0;(#,##0)', iEntregas);

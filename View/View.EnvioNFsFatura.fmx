@@ -1516,22 +1516,25 @@ object view_EnvioNfsFatura: Tview_EnvioNfsFatura
       OnExecute = actionFecharExecute
     end
   end
+  object ScSFTPClient: TScSFTPClient
+    SSHClient = ScSSHClient
+    Left = 152
+    Top = 145
+  end
   object ScSSHClient: TScSSHClient
+    HostKeyAlgorithms = <
+      item
+        Algorithm = aaRSA
+      end>
     HostName = '201.38.172.137'
     User = 'root'
     Password = 'al0c@rioca'
     KeyStorage = ScFileStorage
-    OnServerKeyValidate = ScSSHClientServerKeyValidate
-    Left = 96
-    Top = 177
-  end
-  object ScSFTPClient: TScSFTPClient
-    SSHClient = ScSSHClient
-    Left = 96
-    Top = 121
+    Left = 152
+    Top = 208
   end
   object ScFileStorage: TScFileStorage
-    Left = 96
-    Top = 241
+    Left = 152
+    Top = 265
   end
 end
