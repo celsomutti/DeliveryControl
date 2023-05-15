@@ -14,7 +14,8 @@ uses
   ZXing.ScanManager, FMX.StdActns, FMX.MediaLibrary.Actions, FMX.MediaLibrary, FMX.Platform,
   System.IOUtils, System.Threading, u99Permissions, Controller.RESTNFsFaturas, Androidapi.Helpers, FMX.Helpers.Android,
   Androidapi.JNI.GraphicsContentViewText, Androidapi.JNI.Net, Androidapi.JNI.JavaTypes, Androidapi.JNI.provider,
-  Androidapi.JNI.App, AndroidAPI.jNI.OS, Androidapi.JNIBridge, IdUri, FMX.Platform.Android, ScBridge, ScSFTPClient, ScSSHClient;
+  Androidapi.JNI.App, AndroidAPI.jNI.OS, Androidapi.JNIBridge, IdUri, FMX.Platform.Android,
+  ScBridge, ScSSHClient, ScSFTPClient;
 
   type
   Tview_EnvioNfsFatura = class(TForm)
