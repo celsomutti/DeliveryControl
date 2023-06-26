@@ -57,8 +57,8 @@ begin
   StartRestRequest('/dc_lancamentos_entregador.php');
   DM_Main.RESTResponseDataSetAdapter.Dataset := DM_Main.memTableLancamentos;
   DM_Main.RESTRequest.AddParameter('entregador', sentregador, pkGETorPOST);
-  DM_Main.RESTRequest.AddParameter('data1', sdata1, pkGETorPOST);
-  DM_Main.RESTRequest.AddParameter('data2', sdata2, pkGETorPOST);
+  DM_Main.RESTRequest.AddParameter('datini', sdata1, pkGETorPOST);
+  DM_Main.RESTRequest.AddParameter('datfim', sdata2, pkGETorPOST);
   DM_Main.RESTResponseDataSetAdapter.Active := True;
   DM_Main.RESTRequest.Execute;
   if DM_Main.memTableLancamentos.IsEmpty then Exit;

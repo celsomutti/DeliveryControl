@@ -95,6 +95,7 @@ type
     memTableEntregasDiaval_verba: TStringField;
     memTableEntregasDianom_cliente: TStringField;
     memTableExtratonom_cliente: TStringField;
+    memTableEntregasnom_cliente: TStringField;
   private
     { Private declarations }
   public

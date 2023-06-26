@@ -289,6 +289,10 @@ object DM_Main: TDM_Main
       FieldName = 'des_tipo'
       Size = 255
     end
+    object memTableEntregasnom_cliente: TStringField
+      FieldName = 'nom_cliente'
+      Size = 80
+    end
   end
   object memTableExtravios: TFDMemTable
     FieldDefs = <>

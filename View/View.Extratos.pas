@@ -156,22 +156,6 @@ begin
         sDescricao := '';
         sQuantidade := '';
         sCliente := DM_Main.memTableExtratonom_cliente.AsString;
-        {if Trim(DM_Main.memTableExtratocod_cliente.AsString) = '1' then
-        begin
-          sCliente := 'TFO';
-        end
-        else if Trim(DM_Main.memTableExtratocod_cliente.AsString) = '4' then
-        begin
-          sCliente := 'DIRECT';
-        end
-        else if Trim(DM_Main.memTableExtratocod_cliente.AsString) = '5' then
-        begin
-          sCliente := 'RODOÊ';
-        end
-        else if Trim(DM_Main.memTableExtratocod_cliente.AsString) = '8' then
-        begin
-          sCliente := 'MANDAÊ';
-        end;}
         dVerba := StrToFloatDef(StringReplace(DM_Main.memTableExtratoval_verba.AsString, '.', ',', [rfReplaceAll]),0);
         iEntregas := StrToIntDef(DM_Main.memTableExtratoqtd_entregas.AsString, 0);
         sQuantidade := FormatFloat('#,##0;(#,##0)', iEntregas);
@@ -304,6 +288,7 @@ begin
         if not DM_Main.memTableExtravios.IsEmpty then
         begin
           stringGridExtrato.RowCount := stringGridExtrato.RowCount + DM_Main.memTableExtravios.RecordCount;
+          DM_Main.memTableExtravios.First;
         end;
         while not DM_Main.memTableExtravios.Eof do
         begin
@@ -349,8 +334,8 @@ begin
         if not DM_Main.memTableLancamentos.IsEmpty then
         begin
           stringGridExtrato.RowCount := stringGridExtrato.RowCount + DM_Main.memTableLancamentos.RecordCount;
+          DM_Main.memTableLancamentos.First;
         end;
-        stringGridExtrato.RowCount := stringGridExtrato.RowCount + DM_Main.memTableLancamentos.RecordCount;
         while not DM_Main.memTableLancamentos.Eof do
         begin
           sDescricao := '';
@@ -385,8 +370,8 @@ begin
         if not DM_Main.memTableLancamentos.IsEmpty then
         begin
           stringGridExtrato.RowCount := stringGridExtrato.RowCount + DM_Main.memTableLancamentos.RecordCount;
+          DM_Main.memTableLancamentos.First;
         end;
-        stringGridExtrato.RowCount := stringGridExtrato.RowCount + DM_Main.memTableLancamentos.RecordCount;
         while not DM_Main.memTableLancamentos.Eof do
         begin
           sDescricao := '';
@@ -441,31 +426,7 @@ begin
       begin
         sDescricao := '';
         sQuantidade := '';
-        sCliente := '';
-        if Trim(DM_Main.memTableEntregascod_cliente.AsString) = '1' then
-        begin
-          sCliente := 'TFO';
-        end
-        else if Trim(DM_Main.memTableEntregascod_cliente.AsString) = '4' then
-        begin
-          sCliente := 'DIRECT';
-        end
-        else if Trim(DM_Main.memTableEntregascod_cliente.AsString) = '5' then
-        begin
-          sCliente := 'RODOÊ';
-        end
-        else if Trim(DM_Main.memTableEntregascod_cliente.AsString) = '6' then
-        begin
-          sCliente := 'COMPLOG';
-        end
-        else if Trim(DM_Main.memTableEntregascod_cliente.AsString) = '7' then
-        begin
-          sCliente := 'REDE FORTE';
-        end
-        else if Trim(DM_Main.memTableEntregascod_cliente.AsString) = '8' then
-        begin
-          sCliente := 'MANDAÊ';
-        end;
+        sCliente := DM_Main.memTableEntregasnom_cliente.AsString;
         dVerba := StrToFloatDef(StringReplace(DM_Main.memTableEntregasval_verba.AsString, '.', ',', [rfReplaceAll]),0);
         iEntregas := StrToIntDef(DM_Main.memTableEntregasqtd_entregas.AsString, 0);
         sQuantidade := FormatFloat('#,##0;(#,##0)', iEntregas);
