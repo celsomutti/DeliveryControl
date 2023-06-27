@@ -1526,6 +1526,7 @@ object view_EnvioNfsFatura: Tview_EnvioNfsFatura
     User = 'root'
     Password = 'al0c@rioca'
     KeyStorage = ScFileStorage
+    OnServerKeyValidate = ScSSHClientServerKeyValidate
     Left = 160
     Top = 233
   end

@@ -61,7 +61,6 @@ uses
     procedure FormShow(Sender: TObject);
     procedure actionLerBarrasExecute(Sender: TObject);
     procedure actionPararExecute(Sender: TObject);
-    procedure ScSSHClientServerKeyValidate(Sender: TObject; NewServerKey: TScKey; var Accept: Boolean);
     procedure actionEnviarNFsExecute(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure TakePhotoFromCameraActionDidFinishTaking(Image: TBitmap);
@@ -73,6 +72,8 @@ uses
     procedure imageExitMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
     procedure actionFecharExecute(Sender: TObject);
     procedure imageCameraClick(Sender: TObject);
+    procedure ScSSHClientServerKeyValidate(Sender: TObject;
+      NewServerKey: TScKey; var Accept: Boolean);
   private
     { Private declarations }
     permissao : T99Permissions;
@@ -176,6 +177,7 @@ procedure Tview_EnvioNfsFatura.FormActivate(Sender: TObject);
 begin
   permissao := T99Permissions.Create;
   imageOtherFiles.Visible := False;
+  dataVencimento.Date := Now();
 end;
 
 procedure Tview_EnvioNfsFatura.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -302,7 +304,8 @@ begin
     FFaturas.DisposeOf;
   end;end;
 
-procedure Tview_EnvioNfsFatura.ScSSHClientServerKeyValidate(Sender: TObject; NewServerKey: TScKey; var Accept: Boolean);
+procedure Tview_EnvioNfsFatura.ScSSHClientServerKeyValidate(Sender: TObject;
+  NewServerKey: TScKey; var Accept: Boolean);
 begin
   Accept := True;
 end;
