@@ -178,7 +178,6 @@ begin
         end;
         sDescricao := '';
         sQuantidade := '';
-        sCliente := '';
         sVerba := '';
         {if Trim(sCodcliente) = '1' then
         begin
@@ -217,9 +216,8 @@ begin
         stringGridExtrato.Cells[0,i] := sCliente;
         stringGridExtrato.Cells[1,i] := sData;
         stringGridExtrato.Cells[2,i] := sDescricao;
-        stringGridExtrato.Cells[3,i] := sQuantidade;
-        stringGridExtrato.Cells[4,i] := sCodCliente;
-        stringGridExtrato.Cells[5,i] := sVerba;
+        stringGridExtrato.Cells[3,i] := sVerba;
+        stringGridExtrato.Cells[4,i] := sQuantidade;
         iTotalCliente := iTotalCliente + iEntregas;
         iTotalGeral := iTotalGeral + iEntregas;
         DM_Main.memTableEntregasDia.Next;
